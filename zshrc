@@ -13,7 +13,7 @@ alias vim=nvim
 PROMPT='%1~ => ' # Right side prompt: RPROMPT
 
 # $PATH Variables
-export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" #Add 'code' for VSCode
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Add Visual Studio Code (code)
 
 # Functions
 function mkcd() {
