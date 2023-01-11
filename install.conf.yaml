@@ -6,9 +6,9 @@
 
 - link:
     ~/.zshrc: 
-    ~/.config/nvim:
+    ~/.config:
       create: true
-      path: nvim
+      path: config 
     ~/.gitconfig: 
 
 - create:
