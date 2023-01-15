@@ -30,16 +30,16 @@ vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- Tab stuff
 vim.keymap.set('n', 'tt', ':tabe<Return>', { silent = true })
-vim.keymap.set('n', 'tw', ':tabnext<Return>')
-vim.keymap.set('n', 'tb', ':tabprevious<Return>')
+vim.keymap.set('n', 'T', ':tabnext<Return>')
+vim.keymap.set('n', '<S-Tab>', ':tabprevious<Return>')
 
 -- Split stuff
-vim.keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
-vim.keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
-vim.keymap.set('', '<Space>k', '<C-w>k')
-vim.keymap.set('', '<Space>j', '<C-w>j')
-vim.keymap.set('', '<Space>h', '<C-w>h')
-vim.keymap.set('', '<Space>l', '<C-w>l')
+vim.keymap.set('n', 'ss', ':split<Return>', { silent = true })
+vim.keymap.set('n', 'sv', ':vsplit<Return>', { silent = true })
+vim.keymap.set('n', '<Space>k', '<C-w>k')
+vim.keymap.set('n', '<Space>j', '<C-w>j')
+vim.keymap.set('n', '<Space>h', '<C-w>h')
+vim.keymap.set('n', '<Space>l', '<C-w>l')
 
 -- Resize window
 vim.keymap.set('n', '<Space>,', '<C-w><')
@@ -49,9 +49,11 @@ vim.keymap.set('n', '<Space>=', '<C-w>+')
 
 -- Terminal
 vim.keymap.set('n', '<Leader>t', ':split<cr>:term<cr>10<C-w>-i')
+vim.keymap.set('n', '<Leader>vt', ':vsplit<cr>:term<cr>i')
 vim.keymap.set('t', 'kj', '<C-\\><C-n>')
 
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 vim.keymap.set('n', 'Q', '<nop>')
+

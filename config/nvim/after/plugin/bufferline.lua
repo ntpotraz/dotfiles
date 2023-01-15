@@ -29,5 +29,3 @@ options = {
   },
 }
 
-vim.keymap.set('n', '<S-t>', '<Cmd>BufferLineCycleNext<CR>', {})
-vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})

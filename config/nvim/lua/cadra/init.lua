@@ -16,4 +16,9 @@ if is_win then
   require('cadra.windows')
 end
 
+--local function remove_formatting_capabilities(client)
+--  client.resolved_capabilities.document_formatting = false
+--  client.resolved_capabilities.document_range_formatting = false
+--end
+
 print('Greetings, Cadra')

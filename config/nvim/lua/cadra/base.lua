@@ -1,6 +1,7 @@
 -- Set relative numbers, changes to number in insert mode
 vim.opt.number = true
 vim.opt.relativenumber = true
+
 vim.api.nvim_create_autocmd("InsertEnter", {
 	pattern = '*',
 	command = "set norelativenumber"
@@ -8,6 +9,14 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 vim.api.nvim_create_autocmd("InsertLeave", {
 	pattern = '*',
 	command = "set relativenumber"
+})
+vim.api.nvim_create_autocmd("TermEnter", {
+	pattern = '*',
+	command = "set norelativenumber"
+})
+vim.api.nvim_create_autocmd("TermLeave", {
+	pattern = '*',
+	command = "set norelativenumber"
 })
 
 vim.opt.tabstop = 2

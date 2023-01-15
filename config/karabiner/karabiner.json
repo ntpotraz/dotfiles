@@ -131,6 +131,29 @@
             ]
           },
           {
+            "description": "CAPS LOCK + 1-'=' for FN",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "name": "caps_lock pressed",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "1"
+                },
+                "to": [
+                  {
+                    "key_code": "f1"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "CAPS LOCK + shift + hjkl to scroll",
             "manipulators": [
               {
