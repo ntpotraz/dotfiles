@@ -1,3 +1,4 @@
+tap "1password/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -13,6 +14,8 @@ brew "httpie"
 brew "llvm"
 # Language Server for the Lua language
 brew "lua-language-server"
+# Mac App Store command-line interface
+brew "mas"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -23,14 +26,14 @@ brew "pyenv"
 brew "ripgrep"
 # Terminal multiplexer
 brew "tmux"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
 # Menu bar icon organizer
 cask "bartender"
 # Voice and text chat software
 cask "discord"
 # Custom Minecraft Launcher
 cask "gdlauncher"
-# Git client focusing on productivity
-cask "gitkraken"
 # Web browser
 cask "google-chrome"
 # Hides the Dock when it is overlapped by a window
@@ -47,3 +50,6 @@ cask "raycast"
 cask "shottr"
 # Open-source code editor
 cask "visual-studio-code"
+mas "BetterSnapTool", id: 417375580
+mas "Dropover", id: 1355679052
+mas "HotKey", id: 975890633
