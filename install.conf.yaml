@@ -6,17 +6,16 @@
 
 - link:
     ~/.zshrc: 
-    ~/.config/nvim:
+    ~/.config:
       create: true
-      path: nvim
+      path: config 
     ~/.gitconfig: 
 
 - create:
     - ~/Documents/Programming/
 
 - shell:
-  #- [git submodule update --init --recursive, Installing submodules]
   -
-    command: ./test.zsh
+    command: ./setup_homebrew.zsh
     stdout: true
     stderr: true
