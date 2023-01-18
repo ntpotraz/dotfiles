@@ -9,7 +9,8 @@
     ~/.config:
       create: true
       path: config 
-    ~/.gitconfig: 
+    ~/.gitconfig:
+    ~/.tmux.conf:
 
 - create:
     - ~/Documents/Programming/

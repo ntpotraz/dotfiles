@@ -1,9 +1,8 @@
 -- :help options
--- ==================================================================
 
 -- Number column switching
 vim.opt.number = true -- set numbered lines
-vim.opt.relativenumber = true -- set relative numbered lines
+vim.opt.relativenumber = false -- set relative numbered lines
 vim.api.nvim_create_autocmd("InsertEnter", {
   pattern = "*",
   command = "set norelativenumber",
@@ -56,12 +55,10 @@ vim.opt.pumheight = 10 -- pop up menu height
 vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
 vim.opt.cursorline = true -- highlight the current line
-vim.opt.cursorlineopt = "screenline" -- highlight the current line
 vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
 vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
-vim.opt.colorcolumn = "80" -- creates a vertical column, for page spacing
 -- vim.opt.guifont = "monospace:h16" -- the font used in graphical neovim applications
 
 -- Misc
@@ -70,7 +67,7 @@ vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.opt.mouse = "a" -- allow the mouse to be used in neovim
-vim.opt.timeoutlen = 200 -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.timeoutlen = 1000 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.updatetime = 300 -- faster completion (4000ms default)
 
 vim.opt.shortmess:append("c")

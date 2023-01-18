@@ -138,6 +138,8 @@ alias ls="exa -laFh --git --group-directories-first --no-user"
 alias vim=nvim
 alias clear="clear; neofetch"
 alias cpp='clang++ -o run'
+alias tmuxa='tmux a -t'
+alias tmuxn='tmux new -s'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -55,6 +55,22 @@ lsp.configure("clangd", {
   },
 })
 
+lsp.configure("sumneko_lua", {
+  on_attach = function(client, bufnr)
+    client.server_capabilities.document_formatting = true
+  end,
+  settings = {
+    completions = {
+      completeFunctionCalls = true,
+    },
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+    },
+  },
+})
+
 -- Null_ls config stuff
 
 local null_ls = require("null-ls")

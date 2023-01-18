@@ -1,60 +1,65 @@
+local opts = { noremap = true, silent = true }
+local keymap = vim.keymap.set
+
 -- Space is leader
+keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- File browser
-vim.keymap.set("n", "<leader>sf", vim.cmd.Ex)
+keymap("n", "<leader>sf", vim.cmd.Ex, opts)
 
 -- JK to escape
-vim.keymap.set("i", "jk", "<Esc>")
+keymap("i", "jk", "<Esc>", opts)
 
 -- Combine line under
-vim.keymap.set("n", "<leader>J", "mzJ`z")
+keymap("n", "<leader>J", "mzJ`z", opts)
 
 -- Move up and down by 5
-vim.keymap.set("n", "J", "5j")
-vim.keymap.set("n", "K", "5k")
+keymap("n", "J", "5j", opts)
+keymap("n", "K", "5k", opts)
 
 -- Move highlighted text
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 -- Increment/decrement
-vim.keymap.set("n", "<leader>a", "<C-a>")
-vim.keymap.set("n", "<leader>x", "<C-x>")
-vim.keymap.set("n", "+", "<C-a>")
-vim.keymap.set("n", "-", "<C-x>")
+keymap("n", "<leader>a", "<C-a>", opts)
+keymap("n", "<leader>x", "<C-x>", opts)
+keymap("n", "+", "<C-a>", opts)
+keymap("n", "-", "<C-x>", opts)
 
 -- Select all
-vim.keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap("n", "<C-a>", "gg<S-v>G", opts)
 
 -- Tab stuff
-vim.keymap.set("n", "tt", ":tabe<Return>", { silent = true })
-vim.keymap.set("n", "T", ":tabnext<Return>")
-vim.keymap.set("n", "<S-Tab>", ":tabprevious<Return>")
+keymap("n", "tt", ":tabe<Return>", opts)
+keymap("n", "T", ":tabnext<Return>", opts)
+keymap("n", "<S-Tab>", ":tabprevious<Return>", opts)
 
 -- Split stuff
-vim.keymap.set("n", "ss", ":split<Return>", { silent = true })
-vim.keymap.set("n", "sv", ":vsplit<Return>", { silent = true })
-vim.keymap.set("n", "<Space>k", "<C-w>k")
-vim.keymap.set("n", "<Space>j", "<C-w>j")
-vim.keymap.set("n", "<Space>h", "<C-w>h")
-vim.keymap.set("n", "<Space>l", "<C-w>l")
+keymap("n", "ss", ":split<Return>", opts)
+keymap("n", "sv", ":vsplit<Return>", opts)
+keymap("n", "<Space>k", "<C-w>k", opts)
+keymap("n", "<Space>j", "<C-w>j", opts)
+keymap("n", "<Space>h", "<C-w>h", opts)
+keymap("n", "<Space>l", "<C-w>l", opts)
 
 -- Resize window
-vim.keymap.set("n", "<Space>,", "<C-w><")
-vim.keymap.set("n", "<Space>.", "<C-w>>")
-vim.keymap.set("n", "<Space>-", "<C-w>-")
-vim.keymap.set("n", "<Space>=", "<C-w>+")
+keymap("n", "<Space>,", "2<C-w><", opts)
+keymap("n", "<Space>.", "2<C-w>>", opts)
+keymap("n", "<Space>-", "2<C-w>-", opts)
+keymap("n", "<Space>=", "2<C-w>+", opts)
 
 -- Terminal
-vim.keymap.set("n", "<Leader>t", ":split<cr>:term<cr>10<C-w>-i")
-vim.keymap.set("n", "<Leader>vt", ":vsplit<cr>:term<cr>i")
-vim.keymap.set("t", "kj", "<C-\\><C-n>")
+keymap("n", "<Leader>t", ":split<cr>:term<cr>10<C-w>-i", opts)
+keymap("n", "<Leader>vt", ":vsplit<cr>:term<cr>i", opts)
+keymap("t", "kj", "<C-\\><C-n>", opts)
 
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
 
-vim.keymap.set("n", "Q", "<nop>")
+keymap("n", "Q", "<nop>", opts)
 
 -- Format File
-vim.keymap.set("n", "<leader>fp", ":lua vim.lsp.buf.format()<Cr>", { silent = true })
+keymap("n", "<leader>fp", ":lua vim.lsp.buf.format()<Cr>", opts)
