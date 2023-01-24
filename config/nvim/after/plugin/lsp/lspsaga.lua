@@ -16,7 +16,7 @@ require('lspsaga').setup({
     outgoing = ' ',
     colors = {
       --float window normal background color
-      normal_bg = '#ffffff',
+      normal_bg = '#25272e',
       --title background color
       title_bg = '#afd700',
       red = '#e95678',
@@ -75,4 +75,3 @@ keymap("n", "go", "<cmd>Lspsaga outline<CR>")
 -- to disable it just Lspsaga hover_doc ++quiet
 -- press twice it will jump into hover window
 keymap("n", "gh", "<cmd>Lspsaga hover_doc<CR>")
-

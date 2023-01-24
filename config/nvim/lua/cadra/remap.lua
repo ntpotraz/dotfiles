@@ -20,8 +20,8 @@ keymap("n", "J", "5j", opts)
 keymap("n", "K", "5k", opts)
 
 -- Move highlighted text
-keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
-keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "J", "<cmd>m '>+1<CR>gv=gv", opts)
+keymap("v", "K", "<cmd>m '<-2<CR>gv=gv", opts)
 
 -- Increment/decrement
 keymap("n", "<leader>a", "<C-a>", opts)
@@ -33,13 +33,13 @@ keymap("n", "-", "<C-x>", opts)
 keymap("n", "<C-a>", "gg<S-v>G", opts)
 
 -- Tab stuff
-keymap("n", "tt", ":tabe<Return>", opts)
-keymap("n", "T", ":tabnext<Return>", opts)
-keymap("n", "<S-Tab>", ":tabprevious<Return>", opts)
+keymap("n", "tt", "<cmd>tabe<Return>", opts)
+keymap("n", "T", "<cmd>tabnext<Return>", opts)
+keymap("n", "<S-Tab>", "<cmd>tabprevious<Return>", opts)
 
 -- Split stuff
-keymap("n", "ss", ":split<Return>", opts)
-keymap("n", "sv", ":vsplit<Return>", opts)
+keymap("n", "ss", "<cmd>split<Return>", opts)
+keymap("n", "sv", "<cmd>vsplit<Return>", opts)
 keymap("n", "<Space>k", "<C-w>k", opts)
 keymap("n", "<Space>j", "<C-w>j", opts)
 keymap("n", "<Space>h", "<C-w>h", opts)
@@ -52,8 +52,8 @@ keymap("n", "<Space>-", "2<C-w>-", opts)
 keymap("n", "<Space>=", "2<C-w>+", opts)
 
 -- Terminal
-keymap("n", "<Leader>t", ":split<cr>:term<cr>10<C-w>-i", opts)
-keymap("n", "<Leader>vt", ":vsplit<cr>:term<cr>i", opts)
+keymap("n", "<Leader>t", "<cmd>split<cr><cmd>term<cr>10<C-w>-i", opts)
+keymap("n", "<Leader>vt", "<cmd>vsplit<cr><cmd>term<cr>i", opts)
 keymap("t", "kj", "<C-\\><C-n>", opts)
 
 keymap("n", "n", "nzzzv", opts)
@@ -62,4 +62,4 @@ keymap("n", "N", "Nzzzv", opts)
 keymap("n", "Q", "<nop>", opts)
 
 -- Format File
-keymap("n", "<leader>fp", ":lua vim.lsp.buf.format()<Cr>", opts)
+keymap("n", "<leader>fp", "<cmd>lua vim.lsp.buf.format()<Cr>", opts)
