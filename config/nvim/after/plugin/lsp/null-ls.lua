@@ -46,5 +46,6 @@ null_ls.setup({
 			},
 		}),
 		formatting.stylua,
+		formatting.clang_format,
 	},
 })
