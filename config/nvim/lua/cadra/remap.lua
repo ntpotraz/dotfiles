@@ -63,3 +63,6 @@ keymap("n", "Q", "<nop>", opts)
 
 -- Format File
 keymap("n", "<leader>fp", "<cmd>lua vim.lsp.buf.format()<Cr>", opts)
+
+-- Copilot
+keymap("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

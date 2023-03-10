@@ -5,20 +5,20 @@
 vim.opt.number = true -- set numbered lines
 vim.opt.relativenumber = true -- set relative numbered lines
 vim.api.nvim_create_autocmd("InsertEnter", {
-  pattern = "*",
-  command = "set norelativenumber",
+	pattern = "*",
+	command = "set norelativenumber",
 })
 vim.api.nvim_create_autocmd("InsertLeave", {
-  pattern = "*",
-  command = "set relativenumber",
+	pattern = "*",
+	command = "set relativenumber",
 })
 vim.api.nvim_create_autocmd("TermEnter", {
-  pattern = "*",
-  command = "set norelativenumber",
+	pattern = "*",
+	command = "set norelativenumber",
 })
 vim.api.nvim_create_autocmd("TermLeave", {
-  pattern = "*",
-  command = "set norelativenumber",
+	pattern = "*",
+	command = "set norelativenumber",
 })
 
 -- Tab Stuff
@@ -51,7 +51,7 @@ vim.opt.splitbelow = true -- force all horizontal splits to go below current win
 vim.opt.splitright = true -- force all vertical splits to go to the right of current window
 
 -- Visual
-vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
+vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 vim.opt.pumheight = 10 -- pop up menu height
 vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
@@ -73,7 +73,12 @@ vim.opt.mouse = "a" -- allow the mouse to be used in neovim
 vim.opt.timeoutlen = 200 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.updatetime = 300 -- faster completion (4000ms default)
 
-vim.opt.shortmess:append("c")
+vim.opt.shortmess:append({ c = true })
 
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
+
+-- Copilot
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
+vim.g.copilot_tab_fallback = ""
