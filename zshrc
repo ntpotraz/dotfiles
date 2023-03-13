@@ -6,6 +6,7 @@ echo Greetings, Nathan
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Syntax for man pages
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export HOMEBREW_GITHUB_API_TOKEN='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'
 
 # Aliases
 
@@ -13,6 +14,7 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 # $PATH Variables
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Add Visual Studio Code (code)
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Functions
 function mkcd() {
@@ -136,7 +138,7 @@ source $ZSH/oh-my-zsh.sh
 #
 alias ls="exa -laFh --git --group-directories-first --no-user"
 alias vim=nvim
-alias clear="clear; neofetch"
+alias neo="clear; neofetch"
 alias cpp='clang++ -o run'
 alias tmuxa='tmux a -t'
 alias tmuxn='tmux new -s'
