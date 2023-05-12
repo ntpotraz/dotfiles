@@ -65,8 +65,8 @@ keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
 keymap("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>")
 
 -- Diagnostic jump can use `<c-o>` to jump back
-keymap("n", "<C-j>", "<cmd>Lspsaga diagnostic_jump_next<CR>")
-keymap("n", "<C-k>", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+keymap("n", "<C-d>", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+keymap("n", "<C-s>", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
 
 -- Toggle Outline
 keymap("n", "go", "<cmd>Lspsaga outline<CR>")

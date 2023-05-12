@@ -70,7 +70,7 @@ vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.opt.mouse = "a" -- allow the mouse to be used in neovim
-vim.opt.timeoutlen = 200 -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.timeoutlen = 500 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.updatetime = 300 -- faster completion (4000ms default)
 
 vim.opt.shortmess:append({ c = true })
