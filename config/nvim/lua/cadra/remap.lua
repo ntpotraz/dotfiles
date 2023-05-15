@@ -65,4 +65,4 @@ keymap("n", "Q", "<nop>", opts)
 keymap("n", "<leader>fp", "<cmd>lua vim.lsp.buf.format()<Cr>", opts)
 
 -- Copilot
-keymap("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+keymap("i", "<C-l>", 'copilot#Accept("<CR>")', { noremap = true, silent = true, expr = true, replace_keycodes = false })
