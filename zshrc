@@ -6,6 +6,7 @@ echo Greetings, Nathan
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Syntax for man pages
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export HOMEBREW_GITHUB_API_TOKEN='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'
 
 # Aliases
