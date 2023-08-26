@@ -4,3 +4,9 @@
 	name = Nathan Potraz
 	email = 60411602+ntpotraz@users.noreply.github.com
 
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/cadra/.local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/cadra/.local/bin/gh auth git-credential
