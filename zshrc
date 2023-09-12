@@ -146,6 +146,8 @@ alias cpp='clang++ -o run'
 alias tmuxa='tmux a -t'
 alias tmuxn='tmux new -s'
 alias python='python3'
+alias sshcs433='sshfs potra002@cs433.cs.csusm.edu:/home/potra002 ~/Documents/Programming/School/Server && cd ~/Documents/Programming/School/Server'
+alias unmountcs433='diskutil unmount force ~/Documents/Programming/School/Server && cd'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

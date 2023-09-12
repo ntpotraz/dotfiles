@@ -87,11 +87,11 @@ api.nvim_create_autocmd("BufEnter", {
 })
 
 -- Auto open nvim-tree
-local function open_nvim_tree()
-  -- open the tree
-  require("nvim-tree.api").tree.open()
-end
-api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+-- local function open_nvim_tree()
+--   -- open the tree
+--   require("nvim-tree.api").tree.open()
+-- end
+-- api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 -- Copilot
 g.copilot_no_tab_map = true
