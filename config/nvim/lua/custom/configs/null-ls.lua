@@ -11,7 +11,12 @@ local opts = {
     diagnostics.ruff,
 
     formatting.black,
-    formatting.prettierd,
+    formatting.prettierd.with {
+      extra_args = {
+        "--single-quote",
+        "--jsx-single-quote",
+      },
+    },
     formatting.stylua,
     formatting.clang_format,
 

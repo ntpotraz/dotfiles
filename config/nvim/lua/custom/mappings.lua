@@ -42,6 +42,12 @@ M.general = {
       "LSP hover",
     },
 
+    ["<leader>q"] = {
+      function()
+        require("nvchad.tabufline").close_buffer()
+      end,
+      "Close buffer",
+    },
     -- Increment/Decrement
     ["<leader>a"] = { "<C-a>", "Increment up by 1", opts = { silent = true } },
     ["<leader>x"] = { "<C-x>", "Increment down by 1", opts = { silent = true } },

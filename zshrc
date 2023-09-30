@@ -8,7 +8,9 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Syntax for man pages
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export HOMEBREW_GITHUB_API_TOKEN='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'
-
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # Aliases
 
 # Custom Prompt
