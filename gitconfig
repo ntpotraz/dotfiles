@@ -12,3 +12,5 @@
 	helper = !/home/cadra/.local/bin/gh auth git-credential
 [pager]
 	branch = false
+[core]
+	pager = cat
