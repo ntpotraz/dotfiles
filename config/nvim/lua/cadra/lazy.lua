@@ -32,20 +32,61 @@ return require("lazy").setup({
 				end,
 			},
 		},
+	},
 
+	{
+		'alexghergh/nvim-tmux-navigation',
+		config = function()
+			require 'nvim-tmux-navigation'.setup {
+				disable_when_zoomed = true, -- defaults to false
+				keybindings = {
+					left = "<C-h>",
+					down = "<C-j>",
+					up = "<C-k>",
+					right = "<C-l>",
+					last_active = "<C-\\>",
+					next = "<C-Space>",
+				}
+			}
+		end
 	},
 
 	--- Uncomment these if you want to manage LSP servers from neovim
-	{'williamboman/mason.nvim'},
-	{'williamboman/mason-lspconfig.nvim'},
+	{ 'williamboman/mason.nvim' },
+	{ 'williamboman/mason-lspconfig.nvim' },
 
-	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-	{'neovim/nvim-lspconfig'},
-	{'hrsh7th/cmp-nvim-lsp'},
-	{'hrsh7th/nvim-cmp'},
-	{'L3MON4D3/LuaSnip'},
+	{ 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+	{ 'neovim/nvim-lspconfig' },
+	{ 'hrsh7th/cmp-nvim-lsp' },
+	{ 'hrsh7th/nvim-cmp' },
+	{ 'L3MON4D3/LuaSnip' },
+	{
+		'mfussenegger/nvim-lint',
+		event = { 'BufReadPre', 'BufNewFile' },
+	},
+	{
+		'stevearc/conform.nvim',
+		event = { 'BufReadPre', 'BufNewFile' },
 
-		{ 'folke/which-key.nvim', opts = {} },
+		opts = {},
+	},
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		opts = {
+			triggers_blacklist = {
+				-- list of mode / prefixes that should never be hooked by WhichKey
+				-- this is mostly relevant for keymaps that start with a native binding
+				i = { "j", "k" },
+				v = { "j", "k" },
+				n = { "s" },
+			},
+		}
+	},
 	{
 		-- Adds git related signs to the gutter, as well as utilities for managing changes
 		'lewis6991/gitsigns.nvim',
@@ -59,20 +100,21 @@ return require("lazy").setup({
 				changedelete = { text = '~' },
 			},
 			on_attach = function(bufnr)
-				vim.keymap.set('n', '<leader>hp', require('gitsigns').preview_hunk, { buffer = bufnr, desc = 'Preview git hunk' })
+				vim.keymap.set('n', '<leader>hp', require('gitsigns').preview_hunk,
+					{ buffer = bufnr, desc = 'Preview git hunk' })
 
 				-- don't override the built-in and fugitive keymaps
 				local gs = package.loaded.gitsigns
-				vim.keymap.set({'n', 'v'}, ']c', function()
+				vim.keymap.set({ 'n', 'v' }, ']c', function()
 					if vim.wo.diff then return ']c' end
 					vim.schedule(function() gs.next_hunk() end)
 					return '<Ignore>'
-				end, {expr=true, buffer = bufnr, desc = "Jump to next hunk"})
-				vim.keymap.set({'n', 'v'}, '[c', function()
+				end, { expr = true, buffer = bufnr, desc = "Jump to next hunk" })
+				vim.keymap.set({ 'n', 'v' }, '[c', function()
 					if vim.wo.diff then return '[c' end
 					vim.schedule(function() gs.prev_hunk() end)
 					return '<Ignore>'
-				end, {expr=true, buffer = bufnr, desc = "Jump to previous hunk"})
+				end, { expr = true, buffer = bufnr, desc = "Jump to previous hunk" })
 			end,
 		},
 	},
@@ -82,9 +124,9 @@ return require("lazy").setup({
 		priority = 1000,
 		config = function()
 			vim.cmd.colorscheme 'gruvbox'
-			
-			vim.api.nvim_set_hl(0, 'Normal', {bg = 'none'})
-			vim.api.nvim_set_hl(0, 'NormalFloat', {bg = 'none'})
+
+			vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+			vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 		end,
 	},
 
@@ -121,5 +163,22 @@ return require("lazy").setup({
 			'nvim-treesitter/nvim-treesitter-textobjects',
 		},
 		build = ':TSUpdate',
+		'windwp/nvim-ts-autotag',
+	},
+
+	{
+		-- Auto pair
+		"windwp/nvim-autopairs",
+		opts = {
+			fast_wrap = {},
+			disable_filetype = { "TelescopePrompt", "vim" },
+		},
+		config = function(_, opts)
+			require("nvim-autopairs").setup(opts)
+
+			-- setup cmp for autopairs
+			local cmp_autopairs = require "nvim-autopairs.completion.cmp"
+			require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
+		end,
 	},
 })
