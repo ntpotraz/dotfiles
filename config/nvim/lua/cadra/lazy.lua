@@ -34,6 +34,38 @@ return require("lazy").setup({
 		},
 	},
 
+	-- Bufferline
+	{
+		'akinsho/bufferline.nvim',
+		version = "*",
+		dependencies = 'nvim-tree/nvim-web-devicons'
+	},
+
+	--nvim tree
+	{
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		lazy = false,
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			require("nvim-tree").setup {
+				sort_by = "case_sensitive",
+				view = {
+					width = 30,
+				},
+				renderer = {
+					group_empty = true,
+				},
+				filters = {
+					dotfiles = true,
+				},
+			}
+		end,
+	},
+
+	-- Tmux Navigation
 	{
 		'alexghergh/nvim-tmux-navigation',
 		config = function()
@@ -51,7 +83,7 @@ return require("lazy").setup({
 		end
 	},
 
-	--- Uncomment these if you want to manage LSP servers from neovim
+	-- LSP stuff
 	{ 'williamboman/mason.nvim' },
 	{ 'williamboman/mason-lspconfig.nvim' },
 
@@ -70,6 +102,8 @@ return require("lazy").setup({
 
 		opts = {},
 	},
+
+	-- Which Key
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
@@ -87,8 +121,9 @@ return require("lazy").setup({
 			},
 		}
 	},
+
+	-- Adds git related signs to the gutter, as well as utilities for managing changes
 	{
-		-- Adds git related signs to the gutter, as well as utilities for managing changes
 		'lewis6991/gitsigns.nvim',
 		opts = {
 			-- See `:help gitsigns.txt`
@@ -119,6 +154,7 @@ return require("lazy").setup({
 		},
 	},
 
+	-- Gruvbox Colorscheme
 	{
 		'ellisonleao/gruvbox.nvim',
 		priority = 1000,
@@ -130,10 +166,9 @@ return require("lazy").setup({
 		end,
 	},
 
+	-- Lualine
 	{
-		-- Set lualine as statusline
 		'nvim-lualine/lualine.nvim',
-		-- See `:help lualine.txt`
 		opts = {
 			options = {
 				icons_enabled = false,
@@ -144,11 +179,9 @@ return require("lazy").setup({
 		},
 	},
 
+	-- Add indentation guides even on blank lines
 	{
-		-- Add indentation guides even on blank lines
 		'lukas-reineke/indent-blankline.nvim',
-		-- Enable `lukas-reineke/indent-blankline.nvim`
-		-- See `:help indent_blankline.txt`
 		main = "ibl",
 		opts = {},
 	},
@@ -158,6 +191,7 @@ return require("lazy").setup({
 
 	{
 		-- Highlight, edit, and navigate code
+		'nvim-treesitter/nvim-treesitter-context',
 		'nvim-treesitter/nvim-treesitter',
 		dependencies = {
 			'nvim-treesitter/nvim-treesitter-textobjects',

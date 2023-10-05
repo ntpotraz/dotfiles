@@ -1,7 +1,12 @@
 print('Greetings, Cadra!')
 
+
 require 'cadra.mappings'
 require 'cadra.lazy'
+
+-- Diable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -64,6 +69,6 @@ vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the s
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0                        -- so that `` is visible in markdown files
 vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
-vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
+vim.opt.mouse = 'a'                             -- allow the mouse to be used in neovim
 vim.opt.timeoutlen = 500                        -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.updatetime = 300                        -- faster completion (4000ms default)
