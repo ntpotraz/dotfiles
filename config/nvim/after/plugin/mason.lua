@@ -16,9 +16,9 @@ require('mason-lspconfig').setup({
         "pyright",
         "tsserver",
         "clangd",
-        "cssls",
-        "html",
         "jdtls",
+        "html",
+        "cssls",
     },
     handlers = {
         require('lsp-zero').default_setup,
@@ -40,12 +40,12 @@ lsp.lua_ls.setup({
 
 lsp_zero.setup_servers({
     'jdtls',
-    'html',
-    'cssls',
     'pyright',
     'clangd',
+    'html',
+    'cssls',
     'rust_analyzer',
-    'tsserver',
+    'tsserver'
 })
 
 
