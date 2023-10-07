@@ -24,6 +24,12 @@ vim.keymap.set('t', 'kj', '<C-\\><C-n>', { desc = 'Terminal to normal mode' })
 vim.keymap.set('n', '<leader>t', ':split<CR>15<C-w>-:term<CR>i', { desc = 'Open terminal at bottom' })
 vim.keymap.set('n', '<leader>vt', ':vsplit<CR>:term<CR>i', { desc = 'Open vertical terminal' })
 
+-- Increment Numbers
+vim.keymap.set('n', '<leader>a', '<C-a>', { desc = 'Increment number' })
+vim.keymap.set('n', '<leader>x', '<C-x>', { desc = 'Increment number' })
+
+-- ===============Plugins======================================================
+
 -- Nvim Tree
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { desc = 'Toggle NvimTree' })
 

@@ -128,11 +128,15 @@ return require("lazy").setup({
 		opts = {
 			-- See `:help gitsigns.txt`
 			signs = {
-				add = { text = '+' },
-				change = { text = '~' },
+				add = { text = '|' },
+				change = { text = '|' },
 				delete = { text = '_' },
 				topdelete = { text = '‾' },
 				changedelete = { text = '~' },
+			},
+			current_line_blame = true,
+			current_line_blame_opts = {
+				delay = 250,
 			},
 			on_attach = function(bufnr)
 				vim.keymap.set('n', '<leader>hp', require('gitsigns').preview_hunk,
