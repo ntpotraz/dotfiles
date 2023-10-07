@@ -1,6 +1,5 @@
 print('Greetings, Cadra!')
 
-
 require 'cadra.mappings'
 require 'cadra.lazy'
 
