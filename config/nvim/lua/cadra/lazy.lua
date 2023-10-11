@@ -219,4 +219,17 @@ return require("lazy").setup({
 			require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
 		end,
 	},
+
+	-- Copilot
+	{
+		"zbirenbaum/copilot.lua",
+		event = "VeryLazy",
+	},
+	{
+		"zbirenbaum/copilot-cmp",
+		config = function()
+			require("copilot_cmp").setup()
+		end
+	},
+
 })
