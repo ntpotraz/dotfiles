@@ -1,12 +1,10 @@
 # Base Options
-cd
-clear
 echo Greetings, Nathan
 
 # Variables
+export ZSH="$HOME/.oh-my-zsh"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Syntax for man pages
 export HOMEBREW_CASK_OPTS="--no-quarantine"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export HOMEBREW_GITHUB_API_TOKEN='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'
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -16,6 +14,7 @@ export NVM_DIR="$HOME/.nvm"
 # Custom Prompt
 
 # $PATH Variables
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Add Visual Studio Code (code)
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
@@ -41,7 +40,6 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
