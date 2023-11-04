@@ -28,6 +28,9 @@ vim.keymap.set('n', '<leader>vt', ':vsplit<CR>:term<CR>i', { desc = 'Open vertic
 vim.keymap.set('n', '<leader>a', '<C-a>', { desc = 'Increment number' })
 vim.keymap.set('n', '<leader>x', '<C-x>', { desc = 'Increment number' })
 
+-- Select All
+vim.keymap.set('n', '<C-a>', 'ggVG');
+
 -- ===============Plugins======================================================
 
 -- Nvim Tree

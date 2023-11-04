@@ -45,7 +45,7 @@ lsp_zero.setup_servers({
     'html',
     'cssls',
     'rust_analyzer',
-    'tsserver'
+    'tsserver',
 })
 
 
