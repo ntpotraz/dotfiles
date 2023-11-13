@@ -23,6 +23,7 @@ return require("lazy").setup({
 		"nvim-telescope/telescope-file-browser.nvim",
 		dependencies = {
 			'nvim-telescope/telescope.nvim',
+			intial_mode = "normal",
 			'nvim-lua/plenary.nvim',
 			{
 				'nvim-telescope/telescope-fzf-native.nvim',
