@@ -17,6 +17,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Add Visual Studio Code (code)
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/anaconda3/bin:$PATH"
+export PATH="/opt/homebrew/anaconda3/bin:$PATH"
 
 # Functions
 function mkcd() {
@@ -162,6 +164,7 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+<<<<<<< HEAD
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -178,3 +181,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+=======
+>>>>>>> 6cc8d5c (Messing with telescope to try to get it to enter in normal mode)
