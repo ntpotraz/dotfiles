@@ -6,10 +6,11 @@ local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- Remove Keymaps
-keymap("n", "<C-h>", vim.keymap.del, { desc = "Go to left window", remap = true })
-keymap("n", "<C-j>", vim.keymap.del, { desc = "Go to lower window", remap = true })
-keymap("n", "<C-k>", vim.keymap.del, { desc = "Go to upper window", remap = true })
-keymap("n", "<C-l>", vim.keymap.del, { desc = "Go to right window", remap = true })
+keymap("n", "<C-h>", vim.keymap.del)
+keymap("n", "<C-j>", vim.keymap.del)
+keymap("n", "<C-k>", vim.keymap.del)
+keymap("n", "<C-l>", vim.keymap.del)
+keymap("n", "<C-l>", vim.keymap.del)
 
 keymap("i", "jk", "<Esc>")
 keymap("n", "<C-a>", "gg<S-v>G")
@@ -23,8 +24,8 @@ keymap("n", "<S-tab>", ":tabprev<CR>", opts)
 -- Movement
 keymap("n", "J", "5j")
 keymap("n", "K", "5k", opts)
-keymap("n", "<C-d", "<C-d>zz")
-keymap("n", "<C-u", "<C-u>zz")
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
 keymap("n", "n", "nzz")
 keymap("n", "N", "Nzz")
 
