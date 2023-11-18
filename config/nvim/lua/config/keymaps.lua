@@ -33,7 +33,11 @@ keymap("n", "N", "Nzz")
 keymap("n", "ss", ":split<CR>", opts)
 keymap("n", "sv", ":vsplit<CR>", opts)
 
+-- Diagnostic on cursor
 keymap("n", "<leader>f", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+
+-- Toggle transparency
+keymap("n", "<leader>tb", ":TransparentToggle<CR>", opts)
 
 -- Navigator
 keymap("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", { silent = true })
