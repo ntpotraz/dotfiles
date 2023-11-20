@@ -20,6 +20,11 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/anaconda3/bin:$PATH"
 export PATH="/opt/homebrew/anaconda3/bin:$PATH"
 
+# For go
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
 # Functions
 function mkcd() {
   mkdir -p "$@" && cd "$_";
@@ -164,7 +169,6 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-<<<<<<< HEAD
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -180,6 +184,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-=======
->>>>>>> 6cc8d5c (Messing with telescope to try to get it to enter in normal mode)

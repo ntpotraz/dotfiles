@@ -7,4 +7,13 @@ return {
       keys[#keys + 1] = { "K", false }
     end,
   },
+
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "html-lsp",
+      },
+    },
+  },
 }
