@@ -33,6 +33,15 @@ keymap("n", "N", "Nzz")
 keymap("n", "ss", ":split<CR>", opts)
 keymap("n", "sv", ":vsplit<CR>", opts)
 
+-- Increment/Decrement
+keymap("n", "-", "<C-x>", opts)
+keymap("n", "=", "<C-a>", opts)
+
+-- Terminal Stuff
+keymap("n", "<Leader>tt", ":sp<CR>:term<CR>15<C-w>-i", opts)
+keymap("n", "<Leader>vt", ":vsp<CR>:term<CR>i", opts)
+keymap("t", "kj", "<C-\\><C-n>", opts)
+
 -- Diagnostic on cursor
 keymap("n", "<leader>f", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 
