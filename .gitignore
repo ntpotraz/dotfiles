@@ -1,4 +1,3 @@
-Brewfile.lock.json
-config/nvim/lazy-lock.json
-config/github-copilot/
-config/wireshark/
+.config/nvim/lazy-lock.json
+.config/github-copilot/
+.config/wireshark/
