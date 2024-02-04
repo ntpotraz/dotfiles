@@ -21,6 +21,13 @@ keymap("n", "tt", ":tabedit<CR>", opts)
 keymap("n", "<tab>", ":tabnext<CR>", opts)
 keymap("n", "<S-tab>", ":tabprev<CR>", opts)
 
+-- Terminal Stuff
+keymap("t", "kj", "<C-\\><C-n>", { noremap = true, silent = true, desc = "Exit terminal mode" })
+keymap("n", "<leader>tt", ":sp<CR>:term<CR>i",
+  { noremap = true, silent = true, desc = "Open a horizontally split terminal" })
+keymap("n", "<leader>vt", ":vsp<CR>:term<CR>i",
+  { noremap = true, silent = true, desc = "Open a vertically split terminal" })
+
 -- Movement
 keymap("n", "J", "5j")
 keymap("n", "K", "5k", opts)
@@ -38,6 +45,10 @@ keymap("n", "<leader>f", vim.diagnostic.open_float, { desc = "Line Diagnostics" 
 
 -- Toggle transparency
 keymap("n", "<leader>tb", ":TransparentToggle<CR>", opts)
+
+-- Increment/Decrement Numbers
+keymap("n", "<leader>a", "<C-a>", { desc = "Increment number up by 1" })
+keymap("n", "<leader>x", "<C-x>", { desc = "Decrement number down by 1" })
 
 -- Navigator
 keymap("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", { silent = true })

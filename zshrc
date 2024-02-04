@@ -17,8 +17,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Add Visual Studio Code (code)
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export PATH="/usr/local/anaconda3/bin:$PATH"
-export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+# export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize
+# export PATH="/opt/homebrew/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 # For go
 export GOROOT=/usr/local/go
