@@ -147,7 +147,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # alias ls="ls -al"
 alias ls="eza -lah --git --group-directories-first"
-alias lst="eza -lah --git --group-directories-first -T"
+alias lst="eza -lahT --git --group-directories-first -L"
 alias vim=nvim
 alias neo="clear; neofetch"
 alias cpp='clang++ -o run'
