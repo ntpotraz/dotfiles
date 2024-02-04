@@ -146,7 +146,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # alias ls="ls -al"
-alias ls="exa -laFh --git --group-directories-first"
+alias ls="eza -laFh --git --group-directories-first"
+alias lst="eza -laFh --git --group-directories-first -T"
+#alias ls="eza -lah --git --group-directories-first"
+#alias lst="eza -lah --git --group-directories-first -T"
 alias vim=nvim
 alias neo="clear; neofetch"
 alias cpp='clang++ -o run'
