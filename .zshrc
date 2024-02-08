@@ -33,16 +33,9 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=
 autoload -Uz compinit && compinit
 
 
-# Plugins
+# Plugins (Don't use git for .zsh directory)
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-#plugins=(
-#  git
-#  z
-#  zsh-autosuggestions
-#  zsh-syntax-highlighting
-#)
 
 alias ls="eza -lah --git --group-directories-first"
 alias lst="eza -lahT --git --group-directories-first -L"
