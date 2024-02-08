@@ -11,6 +11,7 @@ keymap("n", "<C-j>", vim.keymap.del)
 keymap("n", "<C-k>", vim.keymap.del)
 keymap("n", "<C-l>", vim.keymap.del)
 keymap("n", "<C-l>", vim.keymap.del)
+keymap("n", "K", vim.keymap.del)
 
 keymap("i", "jk", "<Esc>")
 keymap("n", "<C-a>", "gg<S-v>G")
@@ -23,10 +24,18 @@ keymap("n", "<S-tab>", ":tabprev<CR>", opts)
 
 -- Terminal Stuff
 keymap("t", "kj", "<C-\\><C-n>", { noremap = true, silent = true, desc = "Exit terminal mode" })
-keymap("n", "<leader>tt", ":sp<CR>:term<CR>i",
-  { noremap = true, silent = true, desc = "Open a horizontally split terminal" })
-keymap("n", "<leader>vt", ":vsp<CR>:term<CR>i",
-  { noremap = true, silent = true, desc = "Open a vertically split terminal" })
+keymap(
+  "n",
+  "<leader>tt",
+  ":sp<CR>:term<CR>i",
+  { noremap = true, silent = true, desc = "Open a horizontally split terminal" }
+)
+keymap(
+  "n",
+  "<leader>vt",
+  ":vsp<CR>:term<CR>i",
+  { noremap = true, silent = true, desc = "Open a vertically split terminal" }
+)
 
 -- Movement
 keymap("n", "J", "5j")
