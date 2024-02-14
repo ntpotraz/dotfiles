@@ -1,5 +1,5 @@
 .config/nvim/lazy-lock.json
 .config/github-copilot/
 .config/wireshark/
-.config/lazygit/
+.config/lazygit/state.yml
 .zsh

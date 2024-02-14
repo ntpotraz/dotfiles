@@ -10,12 +10,24 @@ Dotfiles for my terminal, nvim, vscode, and whatever else using GNU stow
 - lazygit
 - stow
 - zsh
+
 - cargo
   - eza
+  - git-delta
+
+
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
 ### MacOS
 
 - brew
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 - git
 - lazygit
 - stow
