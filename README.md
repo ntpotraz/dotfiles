@@ -10,6 +10,7 @@ Dotfiles for my terminal, nvim, vscode, and whatever else using GNU stow
 - lazygit
 - stow
 - zsh
+- zoxide
 
 - cargo
   - eza
@@ -31,6 +32,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 - lazygit
 - stow
 - eza
+- zoxide
 
 If lazygit config doesn't work, run
 

@@ -34,8 +34,12 @@ autoload -Uz compinit && compinit
 
 
 # Plugins (Don't use git for .zsh directory)
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ $(uname) == "Darwin" ]]; then
+  export XDG_CONFIG_HOME="$HOME/.config"
+elif command -v apt > /dev/null; then
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 alias ls="eza -lah --git --group-directories-first"
 alias lst="eza -lahT --git --group-directories-first -L"
@@ -50,6 +54,7 @@ alias unmountcs='diskutil unmount force ~/Documents/Programming/School/Server &&
 
 
 eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
