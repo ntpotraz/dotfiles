@@ -15,7 +15,6 @@ Dotfiles for my terminal, nvim, vscode, and whatever else using GNU stow
   - eza
   - git-delta
 
-
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -32,6 +31,12 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 - lazygit
 - stow
 - eza
+
+If lazygit config doesn't work, run
+
+```
+export XDG_CONFIG_HOME="$HOME/.config"
+```
 
 ## Installation
 
