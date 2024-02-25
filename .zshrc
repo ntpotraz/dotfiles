@@ -36,10 +36,14 @@ fi
 # Plugins (Don't use git for .zsh directory)
 if [[ $(uname) == "Darwin" ]]; then
   export XDG_CONFIG_HOME="$HOME/.config"
+  alias unmountcs='diskutil unmount force ~/Documents/Programming/School/Server && cd'
 elif command -v apt > /dev/null; then
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+  alias bat="batcat"
+  alias unmountcs='umount ~/Documents/Programming/School/Server/'
 fi
 
 alias ls="eza -lah --git --group-directories-first"
@@ -51,7 +55,6 @@ alias tmuxa='tmux a -t'
 alias tmuxn='tmux new -s'
 alias python='python3'
 alias sshcs='sshfs potra002@empress.csusm.edu:/home/students/potra002 ~/Documents/Programming/School/Server && cd ~/Documents/Programming/School/Server'
-alias unmountcs='diskutil unmount force ~/Documents/Programming/School/Server && cd'
 
 
 eval "$(starship init zsh)"
