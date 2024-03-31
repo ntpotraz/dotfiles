@@ -12,6 +12,7 @@ return {
         local builtin = require("telescope.builtin")
         builtin.find_files({
           no_ignore = false,
+          initial_mode = "normal",
           hidden = true,
         })
       end,
@@ -27,7 +28,9 @@ return {
       "<leader><space>",
       function()
         local builtin = require("telescope.builtin")
-        builtin.buffers()
+        builtin.buffers({
+          initial_mode = "normal",
+        })
       end,
     },
     {

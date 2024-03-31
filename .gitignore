@@ -1,6 +1,8 @@
 .config/nvim/lazy-lock.json
+.config/nvim/lazyvim.json
 .config/github-copilot/
 .config/wireshark/
 .config/lazygit/state.yml
 .config/StardewValley
 .zsh
+
