@@ -40,8 +40,8 @@ keymap(
 -- Movement
 keymap("n", "J", "5j")
 keymap("n", "K", "5k", opts)
-keymap("n", "<C-d>", "<C-d>zz")
-keymap("n", "<C-u>", "<C-u>zz")
+--keymap("n", "<C-d>", "zz<C-d>")
+--keymap("n", "<C-u>", "zz<C-u>")
 keymap("n", "n", "nzz")
 keymap("n", "N", "Nzz")
 
