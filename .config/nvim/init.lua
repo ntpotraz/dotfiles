@@ -1,5 +1,5 @@
-require 'cadra.config.keymaps'
 require 'cadra.config.base'
+require 'cadra.config.keymaps'
 require 'cadra.config.autocmd'
 
 -- Lazy Stuff

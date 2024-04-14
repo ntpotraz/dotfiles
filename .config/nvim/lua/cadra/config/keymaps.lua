@@ -30,4 +30,4 @@ keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q
 keymap('t', 'kj', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Transparent Background
-keymap('n', '<leader>tb', ':TransparentToggle<CR>', { silent = true })
+keymap('n', '<leader>tb', ':TransparentToggle<CR>', { silent = true, noremap = true })
