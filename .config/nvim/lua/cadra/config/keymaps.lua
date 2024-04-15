@@ -31,3 +31,5 @@ keymap('t', 'kj', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Transparent Background
 keymap('n', '<leader>tb', ':TransparentToggle<CR>', { silent = true })
+
+-- CodeSnap
