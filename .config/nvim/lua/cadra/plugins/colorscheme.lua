@@ -12,9 +12,23 @@ return {
 
       -- vim.cmd.colorscheme 'catppuccin'
       vim.cmd.colorscheme 'gruvbox'
+      vim.o.background = 'dark'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
     end,
   },
+
+  -- { -- Text to Colorscheme OpenAI
+  --   'svermeulen/text-to-colorscheme.nvim',
+  --   config = {
+  --     ai = {
+  --       openai_api_key = '',
+  --       gpt_model = 'gpt-3.5-turbo',
+  --     },
+  --   },
+  --   init = function()
+  --     vim.cmd [[colorscheme text-to-colorscheme]]
+  --   end,
+  -- },
 }
