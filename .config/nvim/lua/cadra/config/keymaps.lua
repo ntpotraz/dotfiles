@@ -33,3 +33,4 @@ keymap('t', 'kj', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 keymap('n', '<leader>tb', ':TransparentToggle<CR>', { silent = true })
 
 -- CodeSnap
+keymap('v', '<leader>cs', ':CodeSnap<CR>', { silent = true })
