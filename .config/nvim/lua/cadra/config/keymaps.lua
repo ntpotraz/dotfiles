@@ -3,6 +3,14 @@ local keymap = vim.keymap.set
 -- General
 keymap('i', 'jk', '<ESC>')
 
+-- Movement
+keymap('n', 'J', '5j', { noremap = true })
+keymap('n', 'K', '5k', { noremap = true })
+keymap('n', 'n', 'nzz', { noremap = true })
+keymap('n', 'N', 'Nzz', { noremap = true })
+keymap('n', '<C-u>', '<C-u>zz', { noremap = true })
+keymap('n', '<C-d>', '<C-d>zz', { noremap = true })
+
 -- Split
 keymap('n', 'ss', ':split<CR>', { silent = true })
 keymap('n', 'sv', ':vs<CR>', { silent = true })
