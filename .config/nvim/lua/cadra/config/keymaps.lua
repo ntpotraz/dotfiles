@@ -4,8 +4,8 @@ local keymap = vim.keymap.set
 keymap('i', 'jk', '<ESC>')
 
 -- Movement
-keymap('n', 'J', '5j', { noremap = true })
-keymap('n', 'K', '5k', { noremap = true })
+keymap('n', 'J', '5jzz', { noremap = true })
+keymap('n', 'K', '5kzz', { noremap = true })
 keymap('n', 'n', 'nzz', { noremap = true })
 keymap('n', 'N', 'Nzz', { noremap = true })
 keymap('n', '<C-u>', '<C-u>zz', { noremap = true })
