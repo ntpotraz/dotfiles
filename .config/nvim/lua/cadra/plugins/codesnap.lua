@@ -2,7 +2,7 @@ return {
   'mistricky/codesnap.nvim',
   build = 'make',
   event = 'VeryLazy',
-  config = {
+  opts = {
     mac_window_bar = true,
     title = 'CodeSnap.nvim',
     code_font_family = 'CaskaydiaCove Nerd Font',
