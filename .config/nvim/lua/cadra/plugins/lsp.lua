@@ -180,7 +180,7 @@ return {
         'pyright',
         'black',
         'tsserver',
-        --'html-lsp',
+        'html-lsp',
         'css-lsp',
         'gopls',
         'rust_analyzer',
