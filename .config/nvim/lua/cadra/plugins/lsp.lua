@@ -185,7 +185,7 @@ return {
         'gopls',
         'rust_analyzer',
         'clangd',
-        'prettierd',
+        'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -218,14 +218,14 @@ return {
       },
     },
     opts = {
-      -- formatters = {
-      --   prettier = {
-      --     env = {
-      --       tabWidth = 2,
-      --       singleQuote = true,
-      --     },
-      --   },
-      -- },
+      formatters = {
+        prettier = {
+          env = {
+            tabWidth = 2,
+            singleQuote = true,
+          },
+        },
+      },
       notify_on_error = false,
       -- format_on_save = function(bufnr)
       --   -- Disable "format_on_save lsp_fallback" for languages that don't
@@ -245,8 +245,12 @@ return {
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        javascript = { { 'prettierd' } },
-        typescript = { 'prettierd' },
+        javascript = { 'prettier' },
+        typescript = { 'prettier' },
+        javascriptreact = { 'prettier' },
+        typescriptreact = { 'prettier' },
+        html = { 'prettier' },
+        css = { 'prettier' },
       },
     },
   },
@@ -268,8 +272,8 @@ return {
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = { 'ruby' },
       },
-      indent = { enable = true, disable = { 'ruby' } },
-      autotag = { enable = true, },
+      -- indent = { enable = true, disable = { 'ruby' } },
+      autotag = { enable = true },
     },
     config = function(_, opts)
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
@@ -287,5 +291,5 @@ return {
   },
   {
     'windwp/nvim-ts-autotag',
-  }
+  },
 }
