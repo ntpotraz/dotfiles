@@ -41,6 +41,7 @@ return {
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
+      
 
       cmp.setup {
         snippet = {
@@ -99,7 +100,7 @@ return {
         sources = {
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
-          { name = 'path' },
+          -- { name = 'path' },
         },
       }
     end,

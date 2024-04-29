@@ -145,7 +145,14 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        tsserver = {},
+        tsserver = {
+          filetypes = {
+            'javascript',
+            'javascriptreact',
+            'typescript',
+            'typescriptreact',
+          }
+        },
         --
 
         lua_ls = {
@@ -180,7 +187,7 @@ return {
         'pyright',
         'black',
         'tsserver',
-        'html-lsp',
+        -- 'html-lsp',
         'css-lsp',
         'gopls',
         'rust_analyzer',
