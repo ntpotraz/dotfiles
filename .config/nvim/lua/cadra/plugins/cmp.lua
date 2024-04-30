@@ -41,7 +41,6 @@ return {
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
-      
 
       cmp.setup {
         snippet = {
@@ -100,8 +99,41 @@ return {
         sources = {
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
-          -- { name = 'path' },
+          { name = 'path' },
         },
+      }
+
+      -- Import necessary modules
+      local lspconfig = require 'lspconfig'
+      local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+      -- Define a function to filter out the path completion capability
+      local function disable_path_completion(_, server_capabilities)
+        local filtered_capabilities = vim.tbl_deep_extend('force', server_capabilities, {
+          textDocument = {
+            completion = {
+              completionItem = {
+                resolveProvider = false,
+                insertTextModeSupported = false,
+              },
+              insertTextMode = vim.lsp.protocol.InsertTextMode.PlainText,
+            },
+          },
+        })
+        return filtered_capabilities
+      end
+
+      -- Configure the HTML Language Server using Conform.nvim
+      lspconfig.conformls.setup {
+        on_attach = function(client, bufnr)
+          -- Enable the capabilities for other language servers
+          client.server_capabilities = lsp_capabilities
+
+          -- Filter out the path completion capability for the HTML Language Server
+          if client.name == 'html' then
+            client.server_capabilities = disable_path_completion(bufnr, client.server_capabilities)
+          end
+        end,
       }
     end,
   },
