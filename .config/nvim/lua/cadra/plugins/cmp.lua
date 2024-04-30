@@ -103,11 +103,9 @@ return {
         },
       }
 
-      -- Import necessary modules
-      local lspconfig = require 'lspconfig'
-      local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-      -- Define a function to filter out the path completion capability
+      -- Stops HTML-lsp from competing the path
+
       local function disable_path_completion(_, server_capabilities)
         local filtered_capabilities = vim.tbl_deep_extend('force', server_capabilities, {
           textDocument = {
@@ -124,10 +122,10 @@ return {
       end
 
       -- Configure the HTML Language Server using Conform.nvim
-      lspconfig.conformls.setup {
+      require('lspconfig').conformls.setup {
         on_attach = function(client, bufnr)
           -- Enable the capabilities for other language servers
-          client.server_capabilities = lsp_capabilities
+          client.server_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
           -- Filter out the path completion capability for the HTML Language Server
           if client.name == 'html' then
