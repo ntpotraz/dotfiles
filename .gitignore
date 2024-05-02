@@ -2,6 +2,7 @@
 .config/nvim/lazyvim.json
 .config/github-copilot/
 .config/wireshark/
+.config/gh/
 .config/lazygit/state.yml
 .config/StardewValley
 .zsh
