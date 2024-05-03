@@ -145,13 +145,14 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
+        html = {},
         tsserver = {
           filetypes = {
             'javascript',
             'javascriptreact',
             'typescript',
             'typescriptreact',
-          }
+          },
         },
         --
 
@@ -187,7 +188,7 @@ return {
         'pyright',
         'black',
         'tsserver',
-        -- 'html-lsp',
+        'html-lsp',
         'css-lsp',
         'gopls',
         'rust_analyzer',
@@ -224,42 +225,7 @@ return {
         desc = '[F]ormat buffer',
       },
     },
-    opts = {
-      formatters = {
-        prettier = {
-          env = {
-            tabWidth = 2,
-            singleQuote = true,
-          },
-        },
-      },
-      notify_on_error = false,
-      -- format_on_save = function(bufnr)
-      --   -- Disable "format_on_save lsp_fallback" for languages that don't
-      --   -- have a well standardized coding style. You can add additional
-      --   -- languages here or re-enable it for the disabled ones.
-      --   local disable_filetypes = { c = true, cpp = true }
-      --   return {
-      --     timeout_ms = 500,
-      --     lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
-      --   }
-      -- end,
-      formatters_by_ft = {
-        lua = { 'stylua' },
-        -- Conform can also run multiple formatters sequentially
-        python = { 'black' },
-        cpp = { 'clangd' },
-        --
-        -- You can use a sub-list to tell conform to run *until* a formatter
-        -- is found.
-        javascript = { 'prettier' },
-        typescript = { 'prettier' },
-        javascriptreact = { 'prettier' },
-        typescriptreact = { 'prettier' },
-        html = { 'prettier' },
-        css = { 'prettier' },
-      },
-    },
+    opts = {},
   },
 
   -- Highlight todo, notes, etc in comments
