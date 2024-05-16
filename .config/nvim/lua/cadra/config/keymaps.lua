@@ -42,3 +42,6 @@ keymap('v', '<leader>cs', ':CodeSnap<CR>', { silent = true })
 
 -- Mason
 keymap('n', '<leader>cm', ':Mason<CR>', { silent = true, desc = '[C]all [M]ason' })
+
+-- Oil
+keymap('n', '-', '<CMD>Oil --float<CR>', {silent = true})
