@@ -45,6 +45,12 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 https://github.com/nvm-sh/nvm
 
+### Tmux Package Manager
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
 ## Installation
 
 Clone the repo
@@ -58,6 +64,14 @@ Create the symlinks from the .dotfiles folder
 
 ```
 $ stow .
+```
+
+Setup Tmux
+
+```
+$ tmux source ~/.tmux.conf
+$ vim ~/.dotfiles/.tmux.conf
+<Prefix> I
 ```
 
 ## TODO
