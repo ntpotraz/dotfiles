@@ -43,9 +43,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 ### Install Node Version Manager
 
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-```
+https://github.com/nvm-sh/nvm
 
 ## Installation
 
