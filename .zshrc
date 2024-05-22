@@ -1,7 +1,9 @@
 # Base Options
 echo Greetings, Nathan
 
+# Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+export HOMEBREW_CASK_OPTS=--no-quarantine
 
 # Set Zinit dir
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
