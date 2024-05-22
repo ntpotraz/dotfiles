@@ -33,11 +33,18 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 - stow
 - eza
 - zoxide
+- wget
 
 If lazygit config doesn't work, run
 
 ```
 export XDG_CONFIG_HOME="$HOME/.config"
+```
+
+### Install Node Version Manager
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
 ## Installation
