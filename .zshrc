@@ -60,7 +60,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='eza -laF --git --group-directories-first'
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all"
 alias vim='nvim'
 
 # Shell integrations
