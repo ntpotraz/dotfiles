@@ -1,6 +1,9 @@
 # Base Options
 echo Greetings, Nathan
 
+# Paths
+export PATH=$PATH:$HOME/go/bin
+
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_CASK_OPTS=--no-quarantine
