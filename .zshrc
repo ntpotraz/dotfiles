@@ -57,7 +57,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='eza -laF --group-directories-first'
+alias ls='eza -laF --git --group-directories-first'
 alias vim='nvim'
 
 # Shell integrations
