@@ -2,6 +2,7 @@ local keymap = vim.keymap.set
 
 -- General
 keymap('i', 'jk', '<ESC>')
+keymap('n', '<leader>l', '<CMD>Lazy check<CR>' )
 
 -- Movement
 keymap('n', 'J', '5jzz', { noremap = true })
