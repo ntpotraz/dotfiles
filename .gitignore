@@ -10,5 +10,6 @@
 .config/gh/
 .config/lazygit/state.yml
 .config/StardewValley
+.config/envman
 .zsh
 

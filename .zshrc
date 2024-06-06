@@ -3,6 +3,7 @@ echo Greetings, Nathan
 
 # Paths
 export PATH=$PATH:$HOME/go/bin
+export PATH="$HOME/.local/bin:$PATH"
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -70,3 +71,6 @@ eval "$(zoxide init --cmd cd zsh)"
 # Starship - end of zshrc
 eval "$(starship init zsh)"
 
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
