@@ -11,5 +11,6 @@
 .config/lazygit/state.yml
 .config/StardewValley
 .config/envman
+.config/qBittorrent/
 .zsh
 
