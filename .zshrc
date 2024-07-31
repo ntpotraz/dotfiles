@@ -5,9 +5,11 @@ echo Greetings, Nathan
 export PATH=$PATH:$HOME/go/bin
 export PATH="$HOME/.local/bin:$PATH"
 
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export HOMEBREW_CASK_OPTS=--no-quarantine
+if [[ $(uname) == "Darwin" ]]; then 
+  # Homebrew
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  export HOMEBREW_CASK_OPTS=--no-quarantine
+fi
 
 # Set Zinit dir
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
