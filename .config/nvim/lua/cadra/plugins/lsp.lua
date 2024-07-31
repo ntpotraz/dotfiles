@@ -223,7 +223,14 @@ return {
         desc = '[F]ormat buffer',
       },
     },
-    opts = {},
+    opts = {
+      formatters_by_ft = {
+        lua = { 'stylua' },
+        python = { 'black' },
+        javascript = { 'prettierd' },
+        html = { 'prettierd' },
+      },
+    },
   },
 
   -- Highlight todo, notes, etc in comments
