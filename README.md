@@ -14,6 +14,8 @@ Dotfiles for my terminal, nvim, vscode, and whatever else using GNU stow
 - cargo
   - eza
   - git-delta
+  - starship
+      - `cargo install starship --locked`
  
 - lazygit
 ```
@@ -43,6 +45,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 - eza
 - zoxide
 - wget
+- starship
 
 If lazygit config doesn't work, run
 
