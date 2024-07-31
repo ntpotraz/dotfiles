@@ -6,6 +6,10 @@ Dotfiles for my terminal, nvim, vscode, and whatever else using GNU stow
 
 ### Linux
 
+```
+sudo apt-get update && sudo apt-get upgrade
+```
+
 - git
 - stow
 - zsh
@@ -68,21 +72,21 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 Clone the repo
 
 ```
-$ git clone git@github.com:ntpotraz/dotfiles.git ~/.dotfiles/
-$ cd .dotfiles
+git clone git@github.com:ntpotraz/dotfiles.git ~/.dotfiles/
+cd .dotfiles
 ```
 
 Create the symlinks from the .dotfiles folder
 
 ```
-$ stow .
+stow .
 ```
 
 Setup Tmux
 
 ```
-$ tmux source ~/.tmux.conf
-$ vim ~/.dotfiles/.tmux.conf
+tmux source ~/.tmux.conf
+vim ~/.dotfiles/.tmux.conf
 <Prefix> I
 ```
 
