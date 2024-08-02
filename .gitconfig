@@ -1,5 +1,5 @@
 [core]
-	excludesFile = .gitignore_global
+	excludesFile = /Users/cadra/.gitignore_global
 [user]
 	email = 60411602+ntpotraz@users.noreply.github.com
 	name = ntpotraz

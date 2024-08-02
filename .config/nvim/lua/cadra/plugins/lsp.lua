@@ -225,11 +225,16 @@ return {
     },
     opts = {
       formatters_by_ft = {
-        lua = { 'stylua' },
-        python = { 'black' },
-        javascript = { 'prettierd' },
-        html = { 'prettierd' },
+        javascript = { "prettierd" },
+        html = { "prettierd" },
+        css = { "prettierd" },
+        markdown = { "prettierd" }
       },
+      formatters = {
+        prettierd = {
+          prepend_args = {  }
+        }
+      }
     },
   },
 
@@ -240,7 +245,18 @@ return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+      ensure_installed = {
+        'bash',
+        'c',
+        'html',
+        'css',
+        'lua',
+        'luadoc',
+        'markdown',
+        'vim',
+        'vimdoc',
+        'javascript'
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {

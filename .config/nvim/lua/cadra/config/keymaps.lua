@@ -34,6 +34,7 @@ keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q
 keymap('n', '<leader>tt', '<CMD>split<CR><CMD>term<CR>15<C-w>-i', { desc = '[T]oggle [T]erminal' })
 keymap('n', '<leader>vt', '<CMD>vsp<CR><CMD>term<CR>i', { desc = 'Toggle [V]ertical [T]erminal' })
 keymap('t', 'kj', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+keymap('n', '<leader>ft', '<CMD>lua require("FTerm").toggle()<CR>')
 
 -- Transparent Background
 keymap('n', '<leader>tb', ':TransparentToggle<CR>', { silent = true })
