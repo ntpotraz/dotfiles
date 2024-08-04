@@ -65,6 +65,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Aliases
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all"
 alias vim='nvim'
+alias listdisks='sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL'
 
 # Shell integrations
 eval "$(fzf --zsh)"
