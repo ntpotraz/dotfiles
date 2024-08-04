@@ -43,12 +43,15 @@ sudo apt-get update && sudo apt-get upgrade
 - zoxide
 - cmake
 - fzf
-
 - cargo
   - eza
   - git-delta
   - starship
       - `cargo install starship --locked`
+   
+```
+sudo apt install git stow zsh zoxide cmake fzf cargo
+```
  
 - lazygit
 ```
