@@ -18,6 +18,7 @@ Dotfiles for my terminal, nvim, vscode, and whatever else using GNU stow
 - eza
 - zoxide
 - wget
+- tmux
 - starship
 
 If lazygit config doesn't work, run
@@ -41,6 +42,7 @@ sudo apt-get update && sudo apt-get upgrade
 - stow
 - zsh
 - zoxide
+- tmux
 - cmake
 - fzf
 - cargo
@@ -50,7 +52,7 @@ sudo apt-get update && sudo apt-get upgrade
       - `cargo install starship --locked`
    
 ```
-sudo apt install git stow zsh zoxide cmake fzf cargo
+sudo apt install git stow zsh zoxide tmux cmake fzf cargo
 ```
  
 - lazygit
@@ -67,33 +69,12 @@ rm lazygit && rm lazygit.tar.gz
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-- starship
-```
-curl -sS https://starship.rs/install.sh | sh
-```
-
-
 ### Setup SSH Key
 
 ```
 ssh-keygen -t ed25519 -C "your_email@example.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
-```
-
-### Install Node Version Manager
-
-https://github.com/nvm-sh/nvm
-
-```
-nvm install --lts
-nvm use --lts
-```
-
-### Tmux Package Manager
-
-```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ## Installation
@@ -117,15 +98,16 @@ stow .
 chsh -s $(which zsh)
 ```
 
-Setup Tmux
-
-```
-tmux source ~/.tmux.conf
-vim ~/.dotfiles/.tmux.conf
-<Prefix> I
-```
-
 ## NeoVim Setup
+
+### Install Node Version Manager
+
+https://github.com/nvm-sh/nvm
+
+```
+nvm install --lts
+nvm use --lts
+```
 
 ### Install Neovim
 
@@ -143,7 +125,7 @@ sudo apt update
 sudo apt install neovim
 ```
 
-### Dependencies
+#### Dependencies
 
 - ripgrep
   - `sudo apt install ripgrep`
@@ -154,6 +136,15 @@ sudo apt install neovim
 - python neovim
   - `sudo apt install python3-neovim`
   - `sudo apt install python3.12-venv`
+
+### Setup Tmux
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source ~/.tmux.conf
+vim ~/.dotfiles/.tmux.conf
+<Prefix> I
+```
 
 ### Nerd Fonts
 
