@@ -31,11 +31,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-- starship
-```
-curl -sS https://starship.rs/install.sh | sh
-```
-
 ### Linux
 
 ```
@@ -70,6 +65,11 @@ rm lazygit && rm lazygit.tar.gz
 - rustup
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+- starship
+```
+curl -sS https://starship.rs/install.sh | sh
 ```
 
 
