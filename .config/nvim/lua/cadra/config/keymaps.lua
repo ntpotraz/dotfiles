@@ -13,12 +13,12 @@ keymap('n', '<C-u>', '<C-u>zz', { noremap = true })
 keymap('n', '<C-d>', '<C-d>zz', { noremap = true })
 
 -- Split
-keymap('n', 'ss', ':split<CR>', { silent = true })
-keymap('n', 'sv', ':vs<CR>', { silent = true })
+keymap('n', 'ss', '<CMD>split<CR>', { silent = true })
+keymap('n', 'sv', '<CMD>vs<CR>', { silent = true })
 
 -- Buffer
-keymap('n', '<Tab>', ':bnext<CR>', { silent = true })
-keymap('n', '<S-Tab>', ':bprev<CR>', { silent = true })
+keymap('n', '<Tab>', '<CMD>bnext<CR>', { silent = true })
+keymap('n', '<S-Tab>', '<CMD>bprev<CR>', { silent = true })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -37,13 +37,17 @@ keymap('t', 'kj', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 keymap('n', '<leader>ft', '<CMD>lua require("FTerm").toggle()<CR>')
 
 -- Transparent Background
-keymap('n', '<leader>tb', ':TransparentToggle<CR>', { silent = true })
+keymap('n', '<leader>tb', '<CMD>TransparentToggle<CR>', { silent = true })
 
 -- CodeSnap
-keymap('v', '<leader>cs', ':CodeSnap<CR>', { silent = true })
+keymap('v', '<leader>cs', '<CMD>CodeSnap<CR>', { silent = true })
 
 -- Mason
-keymap('n', '<leader>cm', ':Mason<CR>', { silent = true, desc = '[C]all [M]ason' })
+keymap('n', '<leader>cm', '<CMD>Mason<CR>', { silent = true, desc = '[C]all [M]ason' })
 
 -- Oil
 keymap('n', '-', '<CMD>Oil --float<CR>', {silent = true})
+
+-- Live Server
+keymap('n', '<leader>ls', '<CMD>LiveServerStart<CR>')
+keymap('n', '<leader>lx', '<CMD>LiveServerStop<CR>')
