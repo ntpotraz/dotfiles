@@ -67,6 +67,16 @@ alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time
 alias vim='nvim'
 alias listdisks='sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL'
 
+# Linux only alias
+if [[ $(uname) == "Linux" ]]; then 
+  alias bat="batcat"
+fi
+
+# MacOs only alias
+# if [[ $(uname) == "Darwin" ]]; then 
+
+# fi
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
