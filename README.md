@@ -133,6 +133,8 @@ sudo apt install neovim
   - `sudo apt install unzip`
 - npm neovim package
   - `npm install -g neovim`
+- npm live-server
+  - `npm install -g live-server`
 - python neovim
   - `sudo apt install python3-neovim`
   - `sudo apt install python3.12-venv`
