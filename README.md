@@ -45,14 +45,10 @@ sudo apt-get update && sudo apt-get upgrade
 - tmux
 - cmake
 - fzf
-- cargo
-  - eza
-  - git-delta
-  - starship
-      - `cargo install starship --locked`
+
    
 ```
-sudo apt install git stow zsh zoxide tmux cmake fzf cargo
+sudo apt install git stow zsh zoxide tmux cmake fzf
 ```
  
 - lazygit
@@ -67,6 +63,10 @@ rm lazygit && rm lazygit.tar.gz
 - rustup
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+cargo install eza
+cargo install git-delta
+cargo install starship --locked
 ```
 
 ### Setup SSH Key
