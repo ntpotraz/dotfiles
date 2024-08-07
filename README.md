@@ -60,15 +60,6 @@ sudo install lazygit /usr/local/bin
 rm lazygit && rm lazygit.tar.gz
 ```
 
-- rustup
-```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-cargo install eza
-cargo install git-delta
-cargo install starship --locked
-```
-
 ### Setup SSH Key
 
 ```
@@ -102,6 +93,16 @@ stow .
 
 ```
 chsh -s $(which zsh)
+```
+
+### Rust
+
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+cargo install eza
+cargo install git-delta
+cargo install starship --locked
 ```
 
 ## NeoVim Setup
