@@ -87,6 +87,7 @@ stow .
 
 ```
 chsh -s $(which zsh)
+source ~/.zshrc
 ```
 
 ### Rust
