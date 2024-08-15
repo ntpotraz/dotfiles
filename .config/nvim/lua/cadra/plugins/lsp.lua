@@ -189,6 +189,7 @@ return {
         'tsserver',
         'html-lsp',
         'css-lsp',
+        'emmet-ls',
         'rust_analyzer',
         'clangd',
         'prettierd',
