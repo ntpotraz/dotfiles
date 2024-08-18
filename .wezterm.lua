@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local config = {}
 
 -- Font
-config.font = wezterm.font 'Iosevka Nerd Font'
+config.font = wezterm.font 'IosevkaTerm Nerd Font Propo'
 config.font_size = 15.0
 
 -- Colorscheme

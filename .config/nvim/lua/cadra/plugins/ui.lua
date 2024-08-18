@@ -12,62 +12,65 @@ return {
     },
   },
 
-  { -- Useful plugin to show you pending keybinds.
-    'folke/which-key.nvim',
-    event = 'VimEnter', -- Sets the loading event to 'VimEnter'
-    config = function() -- This is the function that runs, AFTER loading
-      require('which-key').setup()
-
-      -- Document existing key chains
-      require('which-key').register {
-        ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-        ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-      }
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = function()
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+      local wk = require("which-key")
+      wk.add({
+        { "<leader>g", group = "[G]it" },
+        { "<leader>c", group = "[C]all" },
+        { "<leader>o", group = "[O]bsidian" },
+      })
     end,
+    keys = {
+      {
+        "<leader>?",
+        function()
+          require("which-key").show({ global = false })
+        end,
+        desc = "Buffer Local Keymaps (which-key)",
+      },
+    },
   },
 
   { -- Transparent Background
     'xiyaowong/transparent.nvim',
   },
 
-  { -- Noice
-    'folke/noice.nvim',
-    event = 'VeryLazy',
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
     opts = {
+      -- add any options here
       lsp = {
+        -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         override = {
-          ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
-          ['vim.lsp.util.stylize_markdown'] = true,
-          ['cmp.entry.get_documentation'] = true,
+          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+          ["vim.lsp.util.stylize_markdown"] = true,
+          ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
         },
       },
-      routes = {
-        {
-          filter = {
-            event = 'msg_show',
-            any = {
-              { find = '%d+L, %d+B' },
-              { find = '; after #%d+' },
-              { find = '; before #%d+' },
-            },
-          },
-          view = 'mini',
-        },
-      },
+      -- you can enable a preset for easier configuration
       presets = {
-        bottom_search = true,
-        command_palette = true,
-        long_message_to_split = true,
-        inc_rename = true,
+        bottom_search = true,     -- use a classic bottom cmdline for search
+        command_palette = true,   -- position the cmdline and popupmenu together
+        long_message_to_split = true, -- long messages will be sent to a split
+        inc_rename = false,       -- enables an input dialog for inc-rename.nvim
+        lsp_doc_border = false,   -- add a border to hover docs and signature help
       },
     },
     dependencies = {
-      'MunifTanjim/nui.nvim',
-      'rcarriga/nvim-notify',
-    },
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    }
   },
 
   {
@@ -77,7 +80,7 @@ return {
     },
   },
 
-  { -- Persisetence - For remembering seesion
+  {                       -- Persisetence - For remembering seesion
     'folke/persistence.nvim',
     event = 'BufReadPre', -- this will only start session saving when an actual file was opened
     opts = {
@@ -89,14 +92,14 @@ return {
     'nvimdev/dashboard-nvim',
     opts = function()
       local logo = [[
-______________________________________/\\\_______________________________        
- _____________________________________\/\\\_______________________________       
-  _____________________________________\/\\\_______________________________      
-   _____/\\\\\\\\__/\\\\\\\\\___________\/\\\___/\\/\\\\\\\___/\\\\\\\\\____     
-    ___/\\\//////__\////////\\\_____/\\\\\\\\\__\/\\\/////\\\_\////////\\\___    
-     __/\\\___________/\\\\\\\\\\___/\\\////\\\__\/\\\___\///____/\\\\\\\\\\__   
-      _\//\\\_________/\\\/////\\\__\/\\\__\/\\\__\/\\\__________/\\\/////\\\__  
-       __\///\\\\\\\\_\//\\\\\\\\/\\_\//\\\\\\\/\\_\/\\\_________\//\\\\\\\\/\\_ 
+______________________________________/\\\_______________________________
+ _____________________________________\/\\\_______________________________
+  _____________________________________\/\\\_______________________________
+   _____/\\\\\\\\__/\\\\\\\\\___________\/\\\___/\\/\\\\\\\___/\\\\\\\\\____
+    ___/\\\//////__\////////\\\_____/\\\\\\\\\__\/\\\/////\\\_\////////\\\___
+     __/\\\___________/\\\\\\\\\\___/\\\////\\\__\/\\\___\///____/\\\\\\\\\\__
+      _\//\\\_________/\\\/////\\\__\/\\\__\/\\\__\/\\\__________/\\\/////\\\__
+       __\///\\\\\\\\_\//\\\\\\\\/\\_\//\\\\\\\/\\_\/\\\_________\//\\\\\\\\/\\_
         ____\////////___\////////\//___\///////\//__\///___________\////////\//__
 ntpotraz@github 
   ]]
@@ -112,18 +115,18 @@ ntpotraz@github 
         },
         config = {
           header = vim.split(logo, '\n'),
-      -- stylua: ignore
-      center = {
-        { action = "Telescope find_files",                                     desc = " Find file",       icon = " ", key = "f" },
-        { action = "ene | startinsert",                                        desc = " New file",        icon = " ", key = "n" },
-        { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
-        { action = "Telescope live_grep",                                      desc = " Find text",       icon = " ", key = "g" },
-        { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
-        { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
-        { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },
-        { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
-        { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
-      },
+          -- stylua: ignore
+          center = {
+            { action = "Telescope find_files", desc = " Find file", icon = " ", key = "f" },
+            { action = "ene | startinsert", desc = " New file", icon = " ", key = "n" },
+            { action = "Telescope oldfiles", desc = " Recent files", icon = " ", key = "r" },
+            { action = "Telescope live_grep", desc = " Find text", icon = " ", key = "g" },
+            { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config", icon = " ", key = "c" },
+            { action = 'lua require("persistence").load()', desc = " Restore Session", icon = " ", key = "s" },
+            { action = "LazyExtras", desc = " Lazy Extras", icon = " ", key = "x" },
+            { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
+            { action = "qa", desc = " Quit", icon = " ", key = "q" },
+          },
           footer = function()
             local stats = require('lazy').stats()
             local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
