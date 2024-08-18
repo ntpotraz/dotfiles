@@ -257,7 +257,8 @@ return {
         'vim',
         'vimdoc',
         'javascript',
-        'markdown_inline'
+        'markdown_inline',
+        'regex',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
