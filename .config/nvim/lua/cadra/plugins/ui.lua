@@ -66,7 +66,6 @@ return {
         {
           filter = {
             event = "msg_show",
-            kind = "",
             find = "written",
           },
           view = "mini",
@@ -87,26 +86,16 @@ return {
       -- OPTIONAL:
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
-      "rcarriga/nvim-notify",
+      {
+        "rcarriga/nvim-notify",
+        opts = {
+          background_colour = '#000000',
+          render = "minimal",
+          stages = "fade",
+          timeout = 2000,
+        },
+      },
     }
-  },
-
-  {
-    "MunifTanjim/nui.popup",
-    opts = {
-      border = {
-        sstyle = "double"
-      }
-    }
-  },
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      background_colour = '#000000',
-      render = "minimal",
-      stages = "fade",
-      timeout = 2000,
-    },
   },
 
   {                       -- Persisetence - For remembering seesion
