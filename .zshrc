@@ -5,8 +5,8 @@ echo Greetings, Nathan
 export PATH=$PATH:$HOME/go/bin
 export PATH="$HOME/.local/bin:$PATH"
 
+# Homebrew
 if [[ $(uname) == "Darwin" ]]; then 
-  # Homebrew
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export HOMEBREW_CASK_OPTS=--no-quarantine
 fi
@@ -73,9 +73,9 @@ if [[ $(uname) == "Linux" ]]; then
 fi
 
 # MacOs only alias
-# if [[ $(uname) == "Darwin" ]]; then 
-
-# fi
+if [[ $(uname) == "Darwin" ]]; then 
+  alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all | grep -v .DS_Store" 
+fi
 
 # Shell integrations
 eval "$(fzf --zsh)"
