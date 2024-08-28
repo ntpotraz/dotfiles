@@ -8,7 +8,7 @@ config.font = wezterm.font 'Iosevka Nerd Font'
 config.font_size = 15.0
 
 -- Colorscheme
-config.color_scheme = 'Nightlion V2 (Gogh)'
+config.color_scheme = 'Treehouse'
 
 -- Window
 config.hide_tab_bar_if_only_one_tab = true
