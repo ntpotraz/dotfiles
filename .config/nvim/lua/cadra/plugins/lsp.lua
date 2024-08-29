@@ -233,7 +233,7 @@ return {
       },
       formatters = {
         prettierd = {
-          prepend_args = {  }
+          append_args = {}
         }
       }
     },
