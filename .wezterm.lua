@@ -8,7 +8,7 @@ config.font = wezterm.font 'Iosevka Nerd Font'
 config.font_size = 15.0
 
 -- Colorscheme
-config.color_scheme = 'Treehouse'
+config.color_scheme = 'GruvboxDarkHard'
 
 -- Window
 config.hide_tab_bar_if_only_one_tab = true
