@@ -8,7 +8,8 @@ config.font = wezterm.font 'Iosevka Nerd Font'
 config.font_size = 15.0
 
 -- Colorscheme
-config.color_scheme = 'GruvboxDarkHard'
+--config.color_scheme = 'GruvboxDarkHard'
+config.color_scheme = 'ayu'
 
 -- Window
 config.hide_tab_bar_if_only_one_tab = true
@@ -28,6 +29,5 @@ if not is_darwin and not is_linux then
   config.win32_system_backdrop = 'Acrylic'
   config.default_prog = { 'powershell.exe' }
 end
-
 
 return config
