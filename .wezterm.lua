@@ -8,8 +8,8 @@ config.font = wezterm.font 'Iosevka Nerd Font'
 config.font_size = 15.0
 
 -- Colorscheme
---config.color_scheme = 'GruvboxDarkHard'
-config.color_scheme = 'ayu'
+-- config.color_scheme = 'GruvboxDarkHard'
+config.color_scheme = 'MaterialDarker'
 
 -- Window
 config.hide_tab_bar_if_only_one_tab = true
