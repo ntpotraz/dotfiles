@@ -1,4 +1,5 @@
 local autocmd = vim.api.nvim_create_autocmd
+local group = vim.api.nvim_create_augroup("Markdown Wrap Settings", { clear = true })
 
 autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
@@ -27,4 +28,20 @@ autocmd('TermLeave', {
   desc = 'Turns relative numbers on when leaving Terminal mode',
   pattern = '*',
   command = 'set relativenumber',
+})
+
+autocmd("BufEnter", {
+  pattern = "*.md",
+  group = group,
+  callback = function()
+    vim.wo.wrap = true
+  end,
+})
+
+autocmd("BufLeave", {
+  pattern = "*",
+  group = group,
+  callback = function()
+    vim.wo.wrap = false
+  end,
 })
