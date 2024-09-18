@@ -9,6 +9,7 @@ return {
     watermark_font_family = 'Pacifico',
     watermark = '',
     bg_theme = 'dusk',
+    bg_padding = 0,
     breadcrumbs_separator = '/',
     has_breadcrumbs = false,
   },
