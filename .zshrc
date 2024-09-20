@@ -40,8 +40,8 @@ zinit cdreplay -q
 
 # Keybindings
 bindkey -e
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+bindkey "^p" history-search-backward
+bindkey "^n" history-search-forward
 
 # History
 HISTSIZE=5000
@@ -56,16 +56,17 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Case Insensitive 
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
+zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
+zstyle ":completion:*" menu no
+zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
+zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
 # Aliases
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all"
-alias vim='nvim'
-alias listdisks='sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL'
+alias vim="nvim"
+alias listdisks="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
+alias img="wezterm img"
 
 # Linux only alias
 if [[ $(uname) == "Linux" ]]; then 
