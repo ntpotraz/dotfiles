@@ -4,6 +4,9 @@ echo Greetings, Nathan
 # Paths
 export PATH=$PATH:$HOME/go/bin
 export PATH="$HOME/.local/bin:$PATH"
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Homebrew
 if [[ $(uname) == "Darwin" ]]; then 
@@ -66,7 +69,7 @@ zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all"
 alias vim="nvim"
 alias listdisks="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
-alias img="wezterm img"
+alias img="wezterm imgcat"
 
 # Linux only alias
 if [[ $(uname) == "Linux" ]]; then 
