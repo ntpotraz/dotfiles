@@ -68,6 +68,11 @@ rm lazygit && rm lazygit.tar.gz
 ssh-keygen -t ed25519 -C "your_email@example.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
+```
+
+Add public key to GitHub profile: https://github.com/settings/keys
+
+```bash
 ssh -T git@github.com
 ```
 
