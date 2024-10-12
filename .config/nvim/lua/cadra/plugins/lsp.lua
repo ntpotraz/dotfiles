@@ -145,7 +145,7 @@ return {
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         html = {},
-        tsserver = {
+        ts_ls = {
           filetypes = {
             'javascript',
             'javascriptreact',
@@ -186,7 +186,7 @@ return {
         'stylua', -- Used to format Lua code
         'pyright',
         'black',
-        'tsserver',
+        'ts_ls',
         'html-lsp',
         'css-lsp',
         'emmet-ls',
