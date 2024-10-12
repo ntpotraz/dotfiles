@@ -4,6 +4,10 @@ Dotfiles for my terminal, nvim, vscode, and whatever else using GNU stow
 
 ## Requirements
 
+Nerdfonts: https://github.com/ryanoasis/nerd-fonts/releases
+- Iosevka
+- Iosevka Term
+
 ### macOS
 
 - brew
@@ -111,6 +115,14 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install eza
 cargo install git-delta
 cargo install starship --locked
+```
+
+### Wezterm for Windows
+
+Create a symlink for Windows in Powershell
+
+```bash
+cmd /c mklink /d "$HOME\.config\wezterm\" "\\path-to-wsl\home\USER\.dotfiles\.config\wezterm\"
 ```
 
 ## NeoVim Setup
