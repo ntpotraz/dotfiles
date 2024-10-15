@@ -6,6 +6,7 @@ return {
     view_options = {
       show_hidden = true,
     },
+    lazy = true,
     keymaps = {
       ["<C-h>"] = false,
       ["q"] = "actions.close",
