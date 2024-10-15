@@ -4,9 +4,21 @@ echo Greetings, Nathan
 # Paths
 export PATH=$PATH:$HOME/go/bin
 export PATH="$HOME/.local/bin:$PATH"
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# MacOS Paths
+if [[ $(uname) == "Darwin" ]]; then 
+  export ANDROID_HOME=$HOME/Library/Android/sdk
+  export PATH=$PATH:$ANDROID_HOME/emulator
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+fi
+
+# Linux Paths
+if [[ $(uname) == "Linux" ]]; then 
+  export ANDROID_HOME=$HOME/android_sdk
+  export PATH=$PATH:$HOME/android_sdk/cmdline-tools/tools/bin
+  export PATH=$PATH:/mnt/c/Users/Cadra/AppData/Local/Android/Sdk/platform-tools
+fi
+
 
 # Homebrew
 if [[ $(uname) == "Darwin" ]]; then 
@@ -74,7 +86,7 @@ alias img="wezterm imgcat"
 # Linux only alias
 if [[ $(uname) == "Linux" ]]; then 
   alias bat="batcat"
-
+  alias emulator="/mnt/c/Users/Cadra/AppData/Local/Android/Sdk/emulator/emulator -avd Pixel_9_Pro_API_35"
 fi
 
 # MacOs only alias
