@@ -1,17 +1,16 @@
 return {
-  'nvim-telescope/telescope.nvim',
-  tag = '0.1.8',
+  "nvim-telescope/telescope.nvim",
+  tag = "0.1.8",
   event = "VimEnter",
-  branch = '0.1.x',
-  dependencies = { 'nvim-lua/plenary.nvim' },
+  branch = "0.1.x",
+  dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
-
-    require("telescope").setup {
+    require("telescope").setup({
       defaults = {
         layout_strategy = "horizontal",
         layout_config = {
-          width = .7,
-          height = .8,
+          width = 0.7,
+          height = 0.8,
           horizontal = {
             preview_width = 0.5,
           },
@@ -31,12 +30,12 @@ return {
         buffers = {
           mappings = {
             n = {
-              ['dd'] = "delete_buffer",
+              ["dd"] = "delete_buffer",
             },
           },
         },
       },
-    }
+    })
 
     local builtin = require("telescope.builtin")
     local keymap = vim.keymap.set

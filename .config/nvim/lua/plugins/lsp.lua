@@ -1,20 +1,24 @@
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
-  -- Automatically install LSPs and related tools to stdpath for Neovim
+    -- Automatically install LSPs and related tools to stdpath for Neovim
     { "williamboman/mason.nvim", opts = {} },
     { "williamboman/mason-lspconfig.nvim", opts = {} },
     {
       "WhoIsSethDaniel/mason-tool-installer.nvim",
       opts = {
         ensure_installed = {
-          "stylua",
+          -- LSP
           "lua_ls",
           "html-lsp",
           "cssls",
           "ts_ls",
-        }
-      }
+
+          -- Formatters & Linters
+          "stylua",
+          "biome",
+        },
+      },
     },
     { "j-hui/fidget.nvim", opts = {} },
     {
@@ -40,22 +44,22 @@ return {
     --   end,
   },
   config = function()
-    require"lspconfig".lua_ls.setup{
+    require("lspconfig").lua_ls.setup({
       filetypes = { "lua" },
-    }
-    require"lspconfig".html.setup{
-      filetypes = { "html"  }
-    }
-    require"lspconfig".cssls.setup{
-      filetypes = {  "css"  }
-    }
-    require"lspconfig".ts_ls.setup{
+    })
+    require("lspconfig").html.setup({
+      filetypes = { "html" },
+    })
+    require("lspconfig").cssls.setup({
+      filetypes = { "css" },
+    })
+    require("lspconfig").ts_ls.setup({
       filetypes = {
         "javascript",
         "typescript",
         "javascriptreact",
-        "typescriptreact"
+        "typescriptreact",
       },
-    }
+    })
   end,
 }

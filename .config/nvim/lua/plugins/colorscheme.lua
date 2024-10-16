@@ -1,10 +1,10 @@
-return { 
-  "ellisonleao/gruvbox.nvim", 
+return {
+  "ellisonleao/gruvbox.nvim",
   lazy = false,
   priority = 1000,
   name = "gruvbox",
   config = function()
-    vim.cmd.colorscheme "gruvbox"
+    vim.cmd.colorscheme("gruvbox")
     vim.o.background = "dark"
   end,
 }
