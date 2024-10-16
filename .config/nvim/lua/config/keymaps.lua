@@ -21,7 +21,10 @@ keymap("n", "<Tab>", "<CMD>bnext<CR>", { silent = true })
 keymap("n", "<S-Tab>", "<CMD>bprev<CR>", { silent = true })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
-keymap("n", "<Esc>", "<cmd>nohlsearch<CR>")
+keymap("n", "<Esc>", "<CMD>nohlsearch<CR>")
+
+-- Mason
+keymap("n", "<leader>cm", "<CMD>Mason<CR>")
 
 -- Oil
 keymap("n", "-", "<CMD>Oil --float<CR>", {silent = true})

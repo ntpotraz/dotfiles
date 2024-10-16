@@ -20,7 +20,7 @@ return {
         mappings = {
           n = {
             ["q"] = "close",
-          }
+          },
         },
       },
 
@@ -32,9 +32,9 @@ return {
           mappings = {
             n = {
               ['dd'] = "delete_buffer",
-            }
-          }
-        }
+            },
+          },
+        },
       },
     }
 
