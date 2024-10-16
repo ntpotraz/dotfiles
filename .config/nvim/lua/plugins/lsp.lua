@@ -17,6 +17,7 @@ return {
           -- Formatters & Linters
           "stylua",
           "biome",
+          "prettierd",
         },
       },
     },
@@ -49,6 +50,9 @@ return {
     })
     require("lspconfig").html.setup({
       filetypes = { "html" },
+      init_options = {
+        provideFormatter = false,
+      },
     })
     require("lspconfig").cssls.setup({
       filetypes = { "css" },
