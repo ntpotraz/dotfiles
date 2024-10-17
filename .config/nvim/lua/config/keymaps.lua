@@ -35,8 +35,3 @@ keymap("n", "<leader>ft", '<CMD>lua require("FTerm").toggle()<CR>')
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 keymap("n", "<Esc>", "<CMD>nohlsearch<CR>")
 
--- Mason
-keymap("n", "<leader>cm", "<CMD>Mason<CR>")
-
--- Oil
-keymap("n", "-", "<CMD>Oil --float<CR>", { silent = true })
