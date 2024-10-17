@@ -16,6 +16,8 @@ return {
       "javascript",
       "typescript",
       "tsx",
+      "markdown",
+      "markdown_inline",
     },
   },
   config = function(_, opts)
