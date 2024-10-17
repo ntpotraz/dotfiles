@@ -12,13 +12,6 @@ keymap("n", "N", "Nzz", { noremap = true })
 keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
 keymap("n", "<C-d>", "<C-d>zz", { noremap = true })
 
--- Diagnostic keymaps
-vim.diagnostic.config({ jump = { float = true } })
-keymap("n", "[d", "vim.diagnostic.jump({count = 1, float = true})", { desc = "Go to previous [D]iagnostic message" })
-keymap("n", "]d", "vim.diagnostic.jump({count = -1, float = true})", { desc = "Go to next [D]iagnostic message" })
-keymap("n", "<leader>f", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-keymap("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-
 -- Split
 keymap("n", "ss", "<CMD>split<CR>", { silent = true })
 keymap("n", "sv", "<CMD>vs<CR>", { silent = true })

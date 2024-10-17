@@ -1,3 +1,6 @@
+local keymap = vim.keymap.set
+
+
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
@@ -6,7 +9,7 @@ return {
       "williamboman/mason.nvim",
       opts = {},
       keys = {
-        vim.keymap.set("n", "<leader>cm", "<CMD>Mason<CR>"),
+        keymap("n", "<leader>cm", "<CMD>Mason<CR>"),
       },
     },
     { "williamboman/mason-lspconfig.nvim", opts = {} },
@@ -47,43 +50,36 @@ return {
     local lsp = require("lspconfig")
 
     -- Define LSP keymaps function
-    local function setup_lsp_keymaps(client, bufnr)
+    local function setup_lsp_keymaps(_, bufnr)
       local opts = { noremap = true, silent = true, buffer = bufnr }
 
       -- Hover documentation
-      vim.keymap.set("n", "gh", vim.lsp.buf.hover, opts)
-      vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+      keymap("n", "gh", vim.lsp.buf.hover, opts)
+      keymap("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 
       -- Navigation
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-      vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-      vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
+      keymap("n", "gd", vim.lsp.buf.definition, opts)
+      keymap("n", "gD", vim.lsp.buf.declaration, opts)
+      keymap("n", "gi", vim.lsp.buf.implementation, opts)
+      keymap("n", "gr", vim.lsp.buf.references, opts)
+      keymap("n", "gt", vim.lsp.buf.type_definition, opts)
 
       -- Workspace management
-      vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
-      vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
-      vim.keymap.set("n", "<leader>wl", function()
+      keymap("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
+      keymap("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
+      keymap("n", "<leader>wl", function()
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
       end, opts)
 
       -- Code actions and refactoring
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-      vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+      keymap("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+      keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)
 
       -- Diagnostics
-      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-      vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
-      vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
-
-      -- Format
-      if client.supports_method("textDocument/formatting") then
-        vim.keymap.set("n", "<leader>f", function()
-          vim.lsp.buf.format({ async = true })
-        end, opts)
-      end
+      keymap("n", "[d", vim.diagnostic.goto_prev, opts)
+      keymap("n", "]d", vim.diagnostic.goto_next, opts)
+      keymap("n", "<leader>f", vim.diagnostic.open_float, opts)
+      keymap("n", "<leader>q", vim.diagnostic.setloclist, opts)
     end
 
     -- Default LSP config to apply to all servers

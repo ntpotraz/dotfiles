@@ -41,7 +41,7 @@ vim.opt.colorcolumn = '81'
 vim.opt.updatetime = 250
 
 -- Keycombo actuation time
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 500
 
 -- Configure how new splits should be opened
 vim.opt.splitright = true
