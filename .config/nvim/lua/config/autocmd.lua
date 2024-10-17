@@ -63,3 +63,18 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
   end,
 })
+
+-- -----------------------------------------------------------------------------
+
+-- CMP Background
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = function()
+    vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE" })
+    vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#3D3836" })
+    vim.api.nvim_set_hl(0, "CmpItemMenu", { bg = "NONE" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
+    vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE" })
+  end,
+})
+

@@ -91,7 +91,7 @@ fi
 
 # MacOs only alias
 if [[ $(uname) == "Darwin" ]]; then 
-  alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all | grep -v .DS_Store" 
+  alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all" 
 fi
 
 # Shell integrations
