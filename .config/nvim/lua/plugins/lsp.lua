@@ -40,31 +40,25 @@ return {
       },
     },
     -- { "Bilal2453/luvit-meta", lazy = true }, -- optional `vim.uv` typings
-    -- { -- optional completion source for require statements and module annotations
-    --   "hrsh7th/nvim-cmp",
-    --   opts = function(_, opts)
-    --     opts.sources = opts.sources or {}
-    --     table.insert(opts.sources, {
-    --       name = "lazydev",
-    --       group_index = 0, -- set group index to 0 to skip loading LuaLS completions
-    --     })
-    --   end,
-    -- },
   },
+
   config = function()
-    require("lspconfig").lua_ls.setup({
+    local lsp = require("lspconfig")
+
+    lsp.lua_ls.setup({
       filetypes = { "lua" },
     })
-    require("lspconfig").html.setup({
+
+    lsp.html.setup({
       filetypes = { "html" },
       init_options = {
         provideFormatter = false,
       },
     })
-    require("lspconfig").cssls.setup({
+    lsp.cssls.setup({
       filetypes = { "css" },
     })
-    require("lspconfig").ts_ls.setup({
+    lsp.ts_ls.setup({
       filetypes = {
         "javascript",
         "typescript",
