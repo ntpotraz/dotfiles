@@ -106,6 +106,9 @@ return {
 
     lsp.cssls.setup(vim.tbl_deep_extend("force", default_config, {
       filetypes = { "css" },
+      init_options = {
+        provideFormatter = false,
+      },
     }))
 
     lsp.ts_ls.setup(vim.tbl_deep_extend("force", default_config, {
