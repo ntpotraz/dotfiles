@@ -18,5 +18,12 @@ return {
       css = { "prettierd" },
       javascript = { "biome" },
     },
+    formatters = {
+      biome = {
+        append_args = {
+          "--indent-style=space",
+        },
+      },
+    },
   },
 }
