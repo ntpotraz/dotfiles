@@ -17,6 +17,7 @@ return {
       html = { "prettierd" },
       css = { "biome" },
       javascript = { "biome" },
+      typescript = {"biome"}
     },
     formatters = {
       biome = {
