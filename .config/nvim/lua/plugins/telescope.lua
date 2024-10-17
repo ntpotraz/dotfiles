@@ -1,9 +1,21 @@
+local keymap = vim.keymap.set
+local builtin = require("telescope.builtin")
+local neovimFiles = function()
+  builtin.find_files({ cwd = vim.fn.stdpath("config") })
+end
+
 return {
   "nvim-telescope/telescope.nvim",
   tag = "0.1.8",
   event = "VimEnter",
   branch = "0.1.x",
   dependencies = { "nvim-lua/plenary.nvim" },
+  keys = {
+    keymap("n", "'f", builtin.find_files, { desc = "[F]ind files" }),
+    keymap("n", "'r", builtin.live_grep, { desc = "Live G[r]ep" }),
+    keymap("n", "<leader><space>", builtin.buffers, { desc = "Buffers" }),
+    keymap("n", "<leader>sn", neovimFiles, { desc = "[S]earch [N]eovim files" }),
+  },
   config = function()
     require("telescope").setup({
       defaults = {
@@ -36,12 +48,5 @@ return {
         },
       },
     })
-
-    local builtin = require("telescope.builtin")
-    local keymap = vim.keymap.set
-
-    keymap("n", "'f", builtin.find_files, { desc = "[F]ind files" })
-    keymap("n", "'r", builtin.live_grep, { desc = "Live G[r]ep" })
-    keymap("n", "<leader><space>", builtin.buffers, { desc = "Buffers" })
   end,
 }
