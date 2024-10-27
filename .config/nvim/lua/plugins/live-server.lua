@@ -3,9 +3,9 @@ return {
   build = "npm add -g live-server",
   cmd = { "LiveServerStart", "LiveServerStop" },
   config = true,
-  maps = {
-    vim.keymap.set("n", "<leader>ls", "<CMD>LiveServerStart<CR>", {desc = "Start [L]ive [S]erver"}),
-    vim.keymap.set("n", "<leader>lx", "<CMD>LiveServerStop<CR>", {desc = "Stop Live Server"})
+  keys = {
+    { "<leader>ls", "<CMD>LiveServerStart<CR>", desc = "Start [L]ive [S]erver" },
+    { "<leader>lx", "<CMD>LiveServerStop<CR>", desc = "Stop [L]ive Server[X]" },
   },
   opts = {},
 }

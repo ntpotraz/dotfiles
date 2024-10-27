@@ -8,7 +8,7 @@ return {
     },
     lazy = true,
     keys = {
-      vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { silent = true }),
+      { "-", "<CMD>Oil --float<CR>", silent = true },
     },
     keymaps = {
       ["<C-h>"] = false,
