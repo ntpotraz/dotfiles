@@ -21,8 +21,8 @@ keymap("n", "<Tab>", "<CMD>bnext<CR>", { silent = true })
 keymap("n", "<S-Tab>", "<CMD>bprev<CR>", { silent = true })
 
 -- Terminal
-keymap("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-keymap("t", "<C-d>", "<C-\\><C-n><CMD>bd!<CR>", { desc = "Exit terminal mode" })
+keymap("t", "<C-q>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+keymap("t", "<C-d>", "<C-\\><C-n><CMD>bd!<CR>", { desc = "Exit terminal mode and close buffer" })
 keymap("n", "<leader>ft", '<CMD>lua require("FTerm").toggle()<CR>')
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
