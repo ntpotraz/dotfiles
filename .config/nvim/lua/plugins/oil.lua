@@ -2,14 +2,14 @@ return {
   "stevearc/oil.nvim",
   ---@module "oil"
   ---@type oil.SetupOpts
+  keys = {
+    { "-", "<CMD>Oil --float<CR>", silent = true },
+  },
   opts = {
     view_options = {
       show_hidden = true,
     },
     lazy = true,
-    keys = {
-      { "-", "<CMD>Oil --float<CR>", silent = true },
-    },
     keymaps = {
       ["<C-h>"] = false,
       ["q"] = "actions.close",

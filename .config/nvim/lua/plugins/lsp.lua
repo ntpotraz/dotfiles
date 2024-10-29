@@ -1,6 +1,5 @@
 local keymap = vim.keymap.set
 
-
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
@@ -9,7 +8,7 @@ return {
       "williamboman/mason.nvim",
       opts = {},
       keys = {
-        keymap("n", "<leader>cm", "<CMD>Mason<CR>"),
+        { "<leader>cm", "<CMD>Mason<CR>", desc = "[C]all [M]ason" },
       },
     },
     { "williamboman/mason-lspconfig.nvim", opts = {} },
@@ -48,6 +47,34 @@ return {
 
   config = function()
     local lsp = require("lspconfig")
+
+    vim.diagnostic.config({
+      float = {
+        max_width = 100,
+        border = "single",
+      },
+    })
+
+    -- vim.lsp.handlers["textDocument/completion"] = vim.lsp.with(vim.lsp.handlers.completion, {
+    --   -- Use a sharp border with `FloatBorder` highlights
+    --   border = "double",
+    --   -- add the title in hover float window
+    --   title = "hover",
+    -- })
+    --
+    -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+    --   -- Use a sharp border with `FloatBorder` highlights
+    --   border = "double",
+    --   -- add the title in hover float window
+    --   title = "hover",
+    -- })
+    --
+    -- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+    --   -- Use a sharp border with `FloatBorder` highlights
+    --   title = "Signature",
+    --   border = "single",
+    --   width = 10,
+    -- })
 
     -- Define LSP keymaps function
     local function setup_lsp_keymaps(_, bufnr)

@@ -1,4 +1,3 @@
-local keymap = vim.keymap.set
 local builtin = require("telescope.builtin")
 local neovimFiles = function()
   builtin.find_files({ cwd = vim.fn.stdpath("config") })
@@ -11,7 +10,6 @@ return {
   branch = "0.1.x",
   dependencies = { "nvim-lua/plenary.nvim" },
   keys = {
-    -- keymap("n", "'f", builtin.find_files, { desc = "[F]ind files" }),
     {"'f", builtin.find_files, desc = "[F]ind files" },
     {"'r", builtin.live_grep, desc = "Live G[r]ep" },
     {"<leader><space>", builtin.buffers, desc = "Buffers" },
@@ -38,6 +36,9 @@ return {
 
       pickers = {
         find_files = {
+          initial_mode = "insert",
+        },
+        live_grep = {
           initial_mode = "insert",
         },
         buffers = {

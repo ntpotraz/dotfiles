@@ -3,7 +3,7 @@ return {
   build = "make",
   event = "VeryLazy",
   keys = {
-    vim.keymap.set("v", "<leader>cs", "<CMD>CodeSnap<CR>", { desc = "[C]ode [S]nap", silent = true }),
+    { "<leader>cs", "<CMD>CodeSnap<CR>", desc = "[C]ode [S]nap", silent = true, mode = "v" }
   },
   opts = {
     mac_window_bar = true,

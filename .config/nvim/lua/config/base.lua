@@ -5,6 +5,9 @@ vim.opt.termguicolors = true
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
+-- Number of suggestions in completion
+vim.opt.pumheight = 6
+
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -66,3 +69,5 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
+
+

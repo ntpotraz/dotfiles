@@ -18,7 +18,7 @@ return {
     opts = {},
     lazy = false,
     keys = {
-      vim.keymap.set("n", "<leader>tb", "<CMD>TransparentToggle<CR>", { desc = "[T]oggle Transparent [B]ackground" }),
+      { "<leader>tb", "<CMD>TransparentToggle<CR>", desc = "Toggle [T]ransparent [B]ackground" },
     },
   },
 }

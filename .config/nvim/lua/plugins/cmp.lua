@@ -33,12 +33,14 @@ return {
           scrollbar = true,
           scrolloff = 2,
           side_padding = 1,
+          pumheight = 2,
         },
         documentation = {
           border = "rounded",
           scrollbar = true,
           scrolloff = 2,
           side_padding = 1,
+          max_height = 20,
         }
       },
       mapping = cmp.mapping.preset.insert({
@@ -66,6 +68,7 @@ return {
             buffer = "Ω",
             path = "🖫",
           }
+          vim_item.abbr = string.sub(vim_item.abbr, 1, 20)
           vim_item.menu = menu_icon[entry.source.name]
           return vim_item
         end,
