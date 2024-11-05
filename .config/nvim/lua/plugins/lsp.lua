@@ -82,7 +82,7 @@ return {
 
       -- Hover documentation
       keymap("n", "gh", vim.lsp.buf.hover, opts)
-      keymap("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+      keymap("n", "gk", vim.lsp.buf.signature_help, opts)
 
       -- Navigation
       keymap("n", "gd", vim.lsp.buf.definition, opts)
