@@ -1,16 +1,9 @@
 .config/nvim/lazy-lock.json
 .config/nvim/lazyvim.json
-.config/github-copilot/
-.config/wireshark/
-.config/raycast/
 .config/karabiner/
 .config/zed/
-.config/fish/
 .config/tmux/plugins/
 .config/gh/
 .config/lazygit/state.yml
-.config/StardewValley
-.config/envman
-.config/qBittorrent/
 .zsh
 
