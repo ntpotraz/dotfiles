@@ -20,7 +20,6 @@ Nerdfonts: https://github.com/ryanoasis/nerd-fonts/releases
 - gh
 - lazygit
 - stow
-- eza
 - zoxide
 - wget
 - tmux
