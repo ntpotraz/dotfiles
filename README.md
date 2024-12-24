@@ -5,6 +5,7 @@ Dotfiles for my terminal, nvim, vscode, and whatever else using GNU stow
 ## Requirements
 
 Nerdfonts: https://github.com/ryanoasis/nerd-fonts/releases
+- VictorMono
 - Iosevka
 - Iosevka Term
 
