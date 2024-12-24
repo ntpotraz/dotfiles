@@ -119,10 +119,16 @@ cargo install starship --locked
 
 ### Wezterm for Windows
 
+Open an Administrator Powershell terminal and create a .config/ folder in user home folder
+
+```bash
+mkdir "$HOME\.config\"
+```
+
 Create a symlink for Windows in Powershell
 
 ```bash
-cmd /c mklink /d "$HOME\.config\wezterm\" "\\path-to-wsl\home\USER\.dotfiles\.config\wezterm\"
+New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.config\wezterm" -Target "\\wsl$\ubuntu-24.04\home\cadra\.dotfiles\.config\wezterm\"
 ```
 
 ## NeoVim Setup
