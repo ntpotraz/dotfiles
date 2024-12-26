@@ -92,9 +92,9 @@ if [[ $(uname) == "Linux" ]]; then
 fi
 
 # MacOs only alias
-if [[ $(uname) == "Darwin" ]]; then 
-  alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all" 
-fi
+# if [[ $(uname) == "Darwin" ]]; then 
+#   alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all" 
+# fi
 
 # Shell integrations
 source <(fzf --zsh)
