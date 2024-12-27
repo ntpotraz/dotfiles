@@ -2,7 +2,7 @@ shell-integration = zsh
 
 font-family = VictorMono Nerd Font
 theme = Chalk
-background-opacity = 0.5
+background-opacity = 0.7
 background-blur-radius = 20
 
 macos-titlebar-style = hidden
