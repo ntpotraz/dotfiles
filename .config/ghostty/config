@@ -1,0 +1,17 @@
+shell-integration = zsh
+
+font-family = VictorMono Nerd Font
+theme = Chalk
+background-opacity = 0.8
+background-blur-radius = 20
+
+macos-titlebar-style = hidden
+confirm-close-surface = false
+window-padding-x = 8
+window-padding-y = 10
+
+quick-terminal-position = top
+quick-terminal-screen = main
+quick-terminal-animation-duration = 0.2
+
+keybind = cmd+shift+enter=toggle_quick_terminal

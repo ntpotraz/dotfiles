@@ -10,6 +10,7 @@ if [[ $(uname) == "Darwin" ]]; then
   export ANDROID_HOME=$HOME/Library/Android/sdk
   export PATH=$PATH:$ANDROID_HOME/emulator
   export PATH=$PATH:$ANDROID_HOME/platform-tools
+  export BW_SESSION="ViJXlHjiRD6HyuhUf+FqL9sdedolJsHAQ4jL43L/GbjZc+p0BQaFiXSe5zCKLiUY84WSC+Fh1QUIU1d9/9SIJQ=="
 fi
 
 # Linux Paths
@@ -79,6 +80,7 @@ zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
 # Aliases
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all"
+alias lst="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all --tree -L"
 alias vim="nvim"
 alias listdisks="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
 alias img="wezterm imgcat"
@@ -90,12 +92,12 @@ if [[ $(uname) == "Linux" ]]; then
 fi
 
 # MacOs only alias
-if [[ $(uname) == "Darwin" ]]; then 
-  alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all | grep -v .DS_Store" 
-fi
+# if [[ $(uname) == "Darwin" ]]; then 
+#   alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all" 
+# fi
 
 # Shell integrations
-eval "$(fzf --zsh)"
+source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
 
 # Starship - end of zshrc

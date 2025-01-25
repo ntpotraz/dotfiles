@@ -1,0 +1,43 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes" : [
+    {
+      "if" : {
+        "device" : {
+          "serialNumber" : "CF27CB04",
+          "category" : "mouse",
+          "productName" : "Logi POP Mouse",
+          "vendorID" : "0x46d",
+          "productID" : "0xb030"
+        }
+      },
+      "pointer" : {
+        "disableAcceleration" : true
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "option" : false,
+            "button" : 5,
+            "control" : false,
+            "action" : "missionControl",
+            "command" : false,
+            "shift" : false
+          }
+        ]
+      },
+      "scrolling" : {
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : 1,
+        "speed" : {
+          "vertical" : 0
+        },
+        "reverse" : {
+          "vertical" : true
+        }
+      }
+    }
+  ]
+}
