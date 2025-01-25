@@ -19,6 +19,7 @@ config.color_scheme = 'GruvboxDarkHard'
 -- Window
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = 'RESIZE'
+config.audible_bell = "Disabled"
 
 -- Confirm Close
 config.window_close_confirmation = 'NeverPrompt'
