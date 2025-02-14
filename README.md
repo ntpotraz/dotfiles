@@ -68,6 +68,8 @@ rm lazygit && rm lazygit.tar.gz
 
 ### Setup SSH Key
 
+You can use `gh auth login` to setup SSH with the Github CLI and skip the rest of this section or you can setup the SSH key manually.
+
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 eval "$(ssh-agent -s)"
