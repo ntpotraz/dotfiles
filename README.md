@@ -41,7 +41,6 @@ sudo apt-get update && sudo apt-get upgrade
 - git
 - stow
 - zsh
-- zoxide
 - tmux
 - cmake
 - fzf
@@ -49,6 +48,10 @@ sudo apt-get update && sudo apt-get upgrade
 
 ```bash
 sudo apt install git stow zsh zoxide tmux cmake fzf build-essential -y
+```
+
+```bash
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 ```
 
 - GitHub CLI
