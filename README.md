@@ -92,12 +92,6 @@ ssh -T git@github.com
 
 ## Installation
 
-Authenticate with GitHub CLI
-
-```bash
-gh auth login
-```
-
 Clone the repo
 
 ```bash
@@ -109,6 +103,12 @@ Create the symlinks from the .dotfiles folder
 
 ```bash
 stow .
+```
+
+Authenticate with GitHub CLI
+
+```bash
+gh auth login
 ```
 
 ### ZSH Default Shell
