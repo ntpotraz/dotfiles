@@ -108,6 +108,8 @@ chsh -s $(which zsh)
 source ~/.zshrc
 ```
 
+At this point, you'll probably need to exit the shell completely and reconnect
+
 ### Rust
 
 ```bash
