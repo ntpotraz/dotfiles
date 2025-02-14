@@ -45,9 +45,10 @@ sudo apt-get update && sudo apt-get upgrade
 - tmux
 - cmake
 - fzf
+- build-essential
 
 ```bash
-sudo apt install git stow zsh zoxide tmux cmake fzf
+sudo apt install git stow zsh zoxide tmux cmake fzf build-essential -y
 ```
 
 - GitHub CLI
@@ -70,7 +71,13 @@ rm lazygit && rm lazygit.tar.gz
 
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+```bash
 eval "$(ssh-agent -s)"
+```
+
+```bash
 ssh-add ~/.ssh/id_ed25519
 ```
 
@@ -105,6 +112,9 @@ stow .
 
 ```bash
 chsh -s $(which zsh)
+```
+
+```bash
 source ~/.zshrc
 ```
 
@@ -114,8 +124,17 @@ At this point, you'll probably need to exit the shell completely and reconnect
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+```bash
 cargo install eza
+```
+
+```bash  
 cargo install git-delta
+```
+
+```bash
 cargo install starship --locked
 ```
 
@@ -141,6 +160,9 @@ https://github.com/nvm-sh/nvm
 
 ```bash
 nvm install --lts
+```
+
+```bash
 nvm use --lts
 ```
 
@@ -156,7 +178,13 @@ Linux
 
 ```bash
 sudo add-apt-repository ppa:neovim-ppa/unstable
+```
+
+```bash
 sudo apt update
+```
+
+```bash
 sudo apt install neovim
 ```
 
@@ -178,7 +206,13 @@ sudo apt install neovim
 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+```bash
 tmux
+```
+
+```
 <Prefix> I
 ```
 
