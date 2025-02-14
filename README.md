@@ -84,7 +84,7 @@ ssh -T git@github.com
 
 ## Installation
 
-Setup GitHub CLI
+If you didn't setup SSH using the GitHub CLI, connect now
 
 ```bash
 gh auth login
