@@ -47,7 +47,7 @@ sudo apt-get update && sudo apt-get upgrade
 - build-essential
 
 ```bash
-sudo apt install git stow zsh zoxide tmux cmake fzf build-essential -y
+sudo apt install git stow zsh tmux cmake fzf build-essential -y
 ```
 
 ```bash
