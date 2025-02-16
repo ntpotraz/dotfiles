@@ -84,6 +84,7 @@ alias lst="eza --color=always --long --git --no-filesize --icons=always --no-tim
 alias vim="nvim"
 alias listdisks="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
 alias img="wezterm imgcat"
+alias gg="git log --oneline --abbrev-commit --all --graph --decorate --color"
 
 # Linux only alias
 if [[ $(uname) == "Linux" ]]; then 

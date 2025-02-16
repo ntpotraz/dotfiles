@@ -1,5 +1,6 @@
 [core]
 	excludesFile = /Users/cadra/.gitignore_global
+  editor = nvim
 [user]
 	email = 60411602+ntpotraz@users.noreply.github.com
 	name = ntpotraz
