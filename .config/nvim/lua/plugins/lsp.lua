@@ -128,7 +128,12 @@ return {
     }))
 
     lsp.emmet_language_server.setup(vim.tbl_deep_extend("force", default_config, {
-      filetypes = { "html" },
+      filetypes = {
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "typescriptreact",
+      },
     }))
 
     lsp.cssls.setup(vim.tbl_deep_extend("force", default_config, {

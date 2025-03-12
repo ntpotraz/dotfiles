@@ -4,5 +4,6 @@
 .config/tmux/plugins/
 .config/gh/
 .config/lazygit/state.yml
+.config/raycast
 .zsh
 

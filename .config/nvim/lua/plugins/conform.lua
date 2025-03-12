@@ -17,12 +17,15 @@ return {
       html = { "prettierd" },
       css = { "biome" },
       javascript = { "biome" },
+      javascriptreact = { "biome" },
       typescript = { "biome" },
+      typescriptreact = { "biome" },
     },
     formatters = {
       biome = {
         append_args = {
           "--indent-style=space",
+          "--semicolons=always",
         },
       },
     },
