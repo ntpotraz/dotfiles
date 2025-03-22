@@ -25,6 +25,11 @@ Nerdfonts: https://github.com/ryanoasis/nerd-fonts/releases
 - wget
 - tmux
 - starship
+- pyenv
+
+```bash
+brew install git gh lazygit stow zoxide wget tmux starship pyenv
+```
 
 If lazygit config doesn't work, run
 
@@ -68,6 +73,12 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 rm lazygit && rm lazygit.tar.gz
+```
+
+- Pyenv
+
+```bash
+curl -fsSL https://pyenv.run | bash
 ```
 
 ### Setup SSH Key
