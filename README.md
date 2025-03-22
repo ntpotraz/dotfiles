@@ -25,10 +25,15 @@ Nerdfonts: https://github.com/ryanoasis/nerd-fonts/releases
 - wget
 - tmux
 - starship
+- openssl
+- readline
+- sqlite3
+- xz
+- zlib
 - pyenv
 
 ```bash
-brew install git gh lazygit stow zoxide wget tmux starship pyenv
+brew install git gh lazygit stow zoxide wget tmux starship openssl readline sqlite3 xz zlib pyenv
 ```
 
 If lazygit config doesn't work, run
