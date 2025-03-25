@@ -20,7 +20,6 @@ if [[ $(uname) == "Linux" ]]; then
   export PATH=$PATH:/mnt/c/Users/Cadra/AppData/Local/Android/Sdk/platform-tools
 fi
 
-
 # Homebrew
 if [[ $(uname) == "Darwin" ]]; then 
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -79,8 +78,6 @@ zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
 # Aliases
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all"
-alias lst="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all --tree -L"
 alias vim="nvim"
 alias listdisks="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
 alias img="wezterm imgcat"
@@ -90,19 +87,22 @@ alias gg="git log --oneline --abbrev-commit --all --graph --decorate --color"
 if [[ $(uname) == "Linux" ]]; then 
   alias bat="batcat"
   alias emulator="/mnt/c/Users/Cadra/AppData/Local/Android/Sdk/emulator/emulator -avd Pixel_9_Pro_API_35"
+  alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all"
+  alias lst="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all --tree -L"
 fi
 
 # MacOs only alias
-# if [[ $(uname) == "Darwin" ]]; then 
-#   alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all" 
-# fi
+if [[ $(uname) == "Darwin" ]]; then 
+  alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all" 
+  alias lst="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all --tree -L" 
+fi
+
+# Starship - end of zshrc
+eval "$(starship init zsh)"
 
 # Shell integrations
 source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
-
-# Starship - end of zshrc
-eval "$(starship init zsh)"
 
 # pnpm
 export PNPM_HOME="/home/cadra/.local/share/pnpm"
@@ -114,13 +114,6 @@ esac
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
-#Pyenv Start
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-eval "$(pyenv virtualenv-init -)"
-#Pyenv end
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
