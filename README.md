@@ -213,16 +213,13 @@ sudo apt install neovim
 #### Dependencies
 
 - ripgrep
-  - `sudo apt install ripgrep`
 - unzip
-  - `sudo apt install unzip`
-- npm neovim package
-  - `npm install -g neovim`
+- python
+  - `sudo apt install ripgrep unzip python3-neovim python3.12-venv`
+  
+- npm neovim
 - npm live-server
-  - `npm install -g live-server`
-- python neovim
-  - `sudo apt install python3-neovim`
-  - `sudo apt install python3.12-venv`
+  - `npm install -g neovim live-server`
 
 ### Setup Tmux
 
