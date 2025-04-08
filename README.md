@@ -54,10 +54,11 @@ sudo apt-get update && sudo apt-get upgrade
 - tmux
 - cmake
 - fzf
+- gh
 - build-essential
 
 ```bash
-sudo apt install git stow zsh tmux cmake fzf build-essential -y
+sudo apt install git stow zsh tmux cmake fzf gh build-essential -y
 ```
 
 - Zoxide
