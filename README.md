@@ -60,6 +60,8 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt install git stow zsh tmux cmake fzf build-essential -y
 ```
 
+- Zoxide
+
 ```bash
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 ```
