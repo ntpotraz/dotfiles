@@ -42,6 +42,16 @@ If lazygit config doesn't work, run
 export XDG_CONFIG_HOME="$HOME/.config"
 ```
 
+- Install Python
+  - Install Python build dependencies
+```bash
+brew install openssl readline sqlite3 xz zlib tcl-tk@8 libb2
+```
+  - Install Python
+```bash
+pyenv install 3.13.2
+```
+
 ### Linux
 
 ```bash
@@ -87,6 +97,16 @@ rm lazygit && rm lazygit.tar.gz
 
 ```bash
 curl -fsSL https://pyenv.run | bash
+```
+  - Python build dependancies
+```bash
+sudo apt update; sudo apt install build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl git \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+```
+  - Install Python
+```bash
+pyenv install 3.13.2
 ```
 
 ### Setup SSH Key
@@ -214,8 +234,7 @@ sudo apt install neovim
 
 - ripgrep
 - unzip
-- python
-  - `sudo apt install ripgrep unzip python3-neovim python3.12-venv`
+  - `sudo apt install ripgrep unzip`
   
 - npm neovim
 - npm live-server
