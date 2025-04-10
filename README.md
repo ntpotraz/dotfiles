@@ -50,6 +50,7 @@ brew install openssl readline sqlite3 xz zlib tcl-tk@8 libb2
   - Install Python
 ```bash
 pyenv install 3.13.2
+pyenv global 3.13.2
 ```
 
 ### Linux
@@ -107,6 +108,7 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
   - Install Python
 ```bash
 pyenv install 3.13.2
+pyenv global 3.13.2
 ```
 
 ### Setup SSH Key
