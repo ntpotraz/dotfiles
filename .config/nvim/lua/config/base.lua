@@ -35,6 +35,7 @@ vim.opt.smartcase = true
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
 
+-- Column for line character
 vim.opt.colorcolumn = '81'
 
 -- Decrease update time

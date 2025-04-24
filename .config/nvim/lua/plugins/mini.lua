@@ -49,7 +49,9 @@ return {
   {
     "echasnovski/mini.indentscope",
     opts = {
-      options = {},
+      symbol = "╎",
+      options = {
+      },
     },
   },
 }
