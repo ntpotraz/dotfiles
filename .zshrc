@@ -85,7 +85,6 @@ alias gg="git log --oneline --abbrev-commit --all --graph --decorate --color"
 
 # Linux only alias
 if [[ $(uname) == "Linux" ]]; then 
-  alias bat="batcat"
   alias emulator="/mnt/c/Users/Cadra/AppData/Local/Android/Sdk/emulator/emulator -avd Pixel_9_Pro_API_35"
   alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all"
   alias lst="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all --tree -L"
@@ -118,6 +117,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - zsh)"
 #pyenv end
 
+# Set Pywal color
+if [[ $(uname) == "Linux" ]]; then 
+  (cat ~/.cache/wal/sequences &)
+fi
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
