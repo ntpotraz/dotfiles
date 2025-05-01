@@ -120,6 +120,10 @@ return {
       filetypes = { "lua" },
     }))
 
+    lsp.hyprls.setup(vim.tbl_deep_extend("force", default_config, {
+      pattern = { "hypr*.ocnf" },
+    }))
+
     lsp.html.setup(vim.tbl_deep_extend("force", default_config, {
       filetypes = { "html" },
       init_options = {
