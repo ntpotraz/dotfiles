@@ -13,23 +13,6 @@ autocmd("TextYankPost", {
 
 -- -----------------------------------------------------------------------------
 
--- Turn off relative numbers in insert mode
-
--- autocmd("InsertEnter", {
---   desc = "Turns relative numbers off in Insert mode",
---   pattern = "*",
---   command = "set norelativenumber",
--- })
--- autocmd("InsertLeave", {
---   desc = "Turns relative numbers on in Normal mode",
---   pattern = "*",
---   command = "set relativenumber",
--- })
-
-
-
--- -----------------------------------------------------------------------------
-
 -- Turn number off in terminal
 
 autocmd("TermOpen", {
