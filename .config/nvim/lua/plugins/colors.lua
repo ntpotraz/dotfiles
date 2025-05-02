@@ -1,12 +1,21 @@
 return {
   {
-    "ellisonleao/gruvbox.nvim",
+    'uloco/bluloco.nvim',
     lazy = false,
     priority = 1000,
-    name = "gruvbox",
+    dependencies = { 'rktjmp/lush.nvim' },
+    name = 'bluloco',
     config = function()
-      vim.cmd.colorscheme("gruvbox")
-      vim.o.background = "dark"
+      require('bluloco').setup({
+        style = 'dark',
+        commentStyle = { italics = true },
+        transparent = false,
+        italics = true,
+        terminal = vim.fn.has('gui_running') == 1,
+        guicursor = true,
+        rainbow_headings = true,
+      })
+      vim.cmd('colorscheme bluloco')
     end,
   },
   {
@@ -15,5 +24,13 @@ return {
     keys = {
       { '<leader>tb', '<CMD>TransparentToggle<CR>', desc = 'Toggle [T]ransparent [B]ackground' },
     },
+    opts = {
+      extra_groups = {
+        "NormalFloat",
+        "Pmenu",
+        "CmpItemAbbr",
+      },
+      exclude_groups = {},
+    }
   }
 }

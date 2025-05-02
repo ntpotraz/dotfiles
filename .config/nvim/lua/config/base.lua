@@ -19,7 +19,7 @@ vim.opt.hlsearch = true
 vim.opt.showmode = true
 
 -- Sync clipboard between OS and Neovim.
-vim.opt.clipboard = 'unnamedplus'
+-- vim.opt.clipboard = 'unnamedplus'
 
 -- Enable break indent
 vim.opt.breakindent = true
