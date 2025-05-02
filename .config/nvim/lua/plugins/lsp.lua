@@ -28,8 +28,18 @@ return {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       opts = {
         ensure_installed = {
+          -- LSPs
           'lua_ls',
+          'html',
+          'cssls',
+          'ts_ls',
+          'emmet_language_server',
+          'pyright',
+
+          -- Formatters & Linters
+          'stylua',
           'biome',
+          'prettierd',
         },
       },
     },
@@ -39,10 +49,33 @@ return {
     vim.diagnostic.config {
       virtual_text = true,
     }
+
     local lsp = require('lspconfig')
+
     lsp.lua_ls.setup{
       capabilities = capabilities;
       filetypes = 'lua',
+    }
+    lsp.html.setup{
+      capabilities = capabilities;
+      filetypes = 'html',
+    }
+    lsp.cssls.setup{
+      capabilities = capabilities;
+      filetypes = 'css',
+    }
+    lsp.ts_ls.setup{
+      capabilities = capabilities;
+      filetypes = {
+        'javascript',
+        'typescript',
+        'javascriptreact',
+        'typescriptreact'
+      },
+    }
+    lsp.pyright.setup{
+      capabilities = capabilities,
+      filetypes = 'python',
     }
   end,
 }
