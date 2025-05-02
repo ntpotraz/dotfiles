@@ -17,7 +17,7 @@ return {
       'williamboman/mason.nvim',
       opts = {},
       keys = {
-        { '<leader>cm', '<CMD>Mason<CR>', { silent = true, desc = '[C]all [M]ason' } }
+        { '<leader>cm', '<CMD>Mason<CR>', { silent = true, desc = '[C]all [M]ason' } },
       },
     },
     {
@@ -40,42 +40,43 @@ return {
           'stylua',
           'biome',
           'prettierd',
+          'ruff',
         },
       },
     },
   },
   config = function()
     local capabilities = require('blink.cmp').get_lsp_capabilities()
-    vim.diagnostic.config {
+    vim.diagnostic.config({
       virtual_text = true,
-    }
+    })
 
     local lsp = require('lspconfig')
 
-    lsp.lua_ls.setup{
-      capabilities = capabilities;
+    lsp.lua_ls.setup({
+      capabilities = capabilities,
       filetypes = 'lua',
-    }
-    lsp.html.setup{
-      capabilities = capabilities;
+    })
+    lsp.html.setup({
+      capabilities = capabilities,
       filetypes = 'html',
-    }
-    lsp.cssls.setup{
-      capabilities = capabilities;
+    })
+    lsp.cssls.setup({
+      capabilities = capabilities,
       filetypes = 'css',
-    }
-    lsp.ts_ls.setup{
-      capabilities = capabilities;
+    })
+    lsp.ts_ls.setup({
+      capabilities = capabilities,
       filetypes = {
         'javascript',
         'typescript',
         'javascriptreact',
-        'typescriptreact'
+        'typescriptreact',
       },
-    }
-    lsp.pyright.setup{
+    })
+    lsp.pyright.setup({
       capabilities = capabilities,
       filetypes = 'python',
-    }
+    })
   end,
 }
