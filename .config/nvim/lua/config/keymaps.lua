@@ -5,8 +5,6 @@ keymap("i", "jk", "<ESC>")
 keymap("n", "<leader>l", "<CMD>Lazy check<CR>")
 
 -- Movement
-keymap("n", "J", "5jzz", { noremap = true })
-keymap("n", "K", "5kzz", { noremap = true })
 keymap("n", "n", "nzz", { noremap = true })
 keymap("n", "N", "Nzz", { noremap = true })
 keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
