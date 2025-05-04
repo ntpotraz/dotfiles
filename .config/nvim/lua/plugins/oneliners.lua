@@ -1,6 +1,6 @@
 return {
   { -- For yanking in ssh
-    'ojroques/vim-oscyank' 
+    'ojroques/vim-oscyank',
   },
   { -- Git
     'tpope/vim-fugitive',
@@ -8,4 +8,7 @@ return {
   { -- CSS colors
     'brenoprata10/nvim-highlight-colors', opts ={},
   },
+  {
+    'alexghergh/nvim-tmux-navigation', opts = {},
+  }
 }
