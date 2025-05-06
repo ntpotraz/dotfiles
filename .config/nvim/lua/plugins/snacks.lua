@@ -88,7 +88,6 @@ ntpotraz@github 
     zen = {
       enabled = true,
       win = {
-        width = 0,
         wo = {
           number = false,
           relativenumber= false,
