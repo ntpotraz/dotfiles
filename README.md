@@ -31,9 +31,10 @@ Nerdfonts: https://github.com/ryanoasis/nerd-fonts/releases
 - xz
 - zlib
 - pyenv
+- ImageMagick
 
 ```bash
-brew install git gh lazygit stow zoxide wget tmux starship openssl readline sqlite3 xz zlib pyenv
+brew install git gh lazygit stow zoxide wget tmux starship openssl readline sqlite3 xz zlib pyenv imagemagick
 ```
 
 If lazygit config doesn't work, run
@@ -66,10 +67,18 @@ sudo apt-get update && sudo apt-get upgrade
 - cmake
 - fzf
 - gh
+- ImageMagick
 - build-essential
+Arch
+- pyenv
+- neovim
 
 ```bash
-sudo apt install git stow zsh tmux cmake fzf gh build-essential -y
+sudo apt install git stow zsh tmux cmake fzf gh imagemagick build-essential -y
+```
+
+```bash
+yay -S git stow zsh tmux cmake fzf gh imagemagick pyenv neovim build-essential -y
 ```
 
 - Zoxide
@@ -237,6 +246,7 @@ sudo apt install neovim
 - ripgrep
 - unzip
   - `sudo apt install ripgrep unzip`
+  - `yay -S ripgrep unzip`
   
 - npm neovim
 - npm live-server
