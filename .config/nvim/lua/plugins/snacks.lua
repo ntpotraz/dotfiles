@@ -5,55 +5,37 @@ return {
   ---@type snacks.Config
   keys = {
     -- Picker
-    {
-      "'f",
-      function()
-        Snacks.picker.files()
-      end,
-      desc = '[F]ind Files',
-    },
-    {
-      '<leader><space>',
-      function()
-        Snacks.picker.buffers()
-      end,
-      desc = 'Search Buffers',
-    },
-    {
-      "'r",
-      function()
-        Snacks.picker.grep()
-      end,
-      desc = 'G[r]ep Search',
-    },
-    {
-      "'c",
-      function()
-        Snacks.picker.files({ cwd = vim.fn.stdpath('config') })
-      end,
-      desc = 'Search Config Files',
-    },
-    {
-      "'h",
-      function()
-        Snacks.picker.help()
-      end,
-      desc = '[H]elp Pages',
-    },
-    {
-      "'n",
-      function()
-        Snacks.picker.notifications()
-      end,
-      desc = '[N]otification history',
-    },
-    {
-      "'e",
-      function()
-        Snacks.explorer()
-      end,
-      desc = '[E]xplorer',
-    },
+    { "'f", function() Snacks.picker.files() end, desc = '[F]ind Files', },
+    { '<leader><space>', function() Snacks.picker.buffers() end, desc = 'Search Buffers', },
+    { "'r", function() Snacks.picker.grep() end, desc = 'G[r]ep Search', },
+    { "'c", function() Snacks.picker.files({ cwd = vim.fn.stdpath('config') }) end, desc = 'Search Config Files', },
+    { "'h", function() Snacks.picker.help() end, desc = '[H]elp Pages', },
+    { "'n", function() Snacks.picker.notifications() end, desc = '[N]otification history', },
+    { "'e", function() Snacks.explorer() end, desc = '[E]xplorer', },
+
+    -- Git
+    { '<leader>gb', function() Snacks.git.blame_line() end, desc = '[G]it [B]lame' },
+    { '<leader>go', function() Snacks.gitbrowse() end, desc = '[G]it Repo [O]pen' },
+    { '<leader>gg', function() Snacks.lazygit() end, desc = 'LazyGit' },
+    { '<leader>gd', function() Snacks.picker.git_diff() end, desc = 'Git Diffs' },
+
+    -- LSP
+    { 'gd', function() Snacks.picker.lsp_definitions() end, desc = 'Goto Definition' },
+    { 'gD', function() Snacks.picker.lsp_declarations() end, desc =  'Goto Declaration' },
+    { 'gr', function() Snacks.picker.lsp_references() end, nowait = true, desc = 'References' },
+    { 'gI', function() Snacks.picker.lsp_implementations() end, desc = 'Goto Implementation' },
+    { 'gy', function() Snacks.picker.lsp_type_definitions() end, desc = 'Goto T[y]pe Definition' },
+
+    -- Movement
+    { ']]', function() Snacks.words.jump() end, desc = 'Jump to next instance of word' },
+    { '[[', function() Snacks.words.jump(-1) end, desc = 'Jump to previous instance of word' },
+
+    -- Zen
+    { "<leader>z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
+    { "<leader>Z",  function() Snacks.zen.zoom() end, desc = "Toggle Zoom" },
+
+    -- Terminal
+    { '<leader>t', function() Snacks.terminal() end, desc = 'Open [T]erminal' },
   },
   opts = {
     -- your configuration comes here
@@ -91,6 +73,9 @@ ntpotraz@github 
         buffers = {
           focus = 'list',
         },
+        git_diff = {
+          focus = 'list',
+        },
         explorer = {
           layout = {
             layout = {
@@ -100,18 +85,40 @@ ntpotraz@github 
         },
       },
     },
+    zen = {
+      enabled = true,
+      win = {
+        width = 0,
+        wo = {
+          number = false,
+          relativenumber= false,
+          colorcolumn = "",
+          signcolumn = "no",
+          statuscolumn = "",
+        },
+      },
+      on_open = function ()
+       Snacks.indent.disable()
+      end,
+      on_close = function ()
+         Snacks.indent.enable()
+      end,
+    },
 
     bigfile = { enabled = true },
+    quickfile = { enabled = true },
     explorer = { enabled = true },
     image = { enabled = true },
     git = { enabled = true },
-    -- indent = { enabled = true },
-    -- input = { enabled = true },
-    -- notifier = { enabled = true },
-    -- quickfile = { enabled = true },
-    -- scope = { enabled = true },
-    -- scroll = { enabled = true },
-    -- statuscolumn = { enabled = true },
-    -- words = { enabled = true },
+    gitbrowse = { enabled = true },
+    lazygit = { enabled = true },
+    statuscolumn = { enabled = true },
+    notifier = { enabled = true },
+    notify = { enabled = true },
+    input = { enabled = true },
+    rename = { enabled = true },
+    scope = { enabled = true },
+    indent = { enabled = true },
+    words = { enabled = true },
   },
 }

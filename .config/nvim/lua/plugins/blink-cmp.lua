@@ -19,7 +19,6 @@ return {
         border = 'rounded',
       },
       ghost_text = { enabled = true },
-      signature = { enabled = true },
     },
     fuzzy = { implementation = 'prefer_rust_with_warning' },
     signature = { enabled = true },

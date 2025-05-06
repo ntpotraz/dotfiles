@@ -5,5 +5,11 @@ return {
     require('mini.pairs').setup()
     require('mini.surround').setup()
     require('mini.sessions').setup()
+    require('mini.diff').setup({
+      view = {
+        style = 'sign',
+        signs = { add = '▒', change = '▒', delete = '▒' },
+      },
+    })
   end
 }
