@@ -168,10 +168,10 @@ chsh -s $(which zsh)
 ```
 
 ```bash
-source ~/.zshrc
+exec zsh
 ```
 
-At this point, you'll probably need to exit the shell completely and reconnect
+At this point, you might need to exit the shell completely and reconnect
 
 ### Rust
 
