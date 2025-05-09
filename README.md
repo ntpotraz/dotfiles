@@ -78,7 +78,7 @@ sudo apt install git stow zsh tmux cmake fzf gh imagemagick build-essential -y
 ```
 
 ```bash
-yay -S git stow zsh tmux cmake fzf gh imagemagick pyenv neovim build-essential -y
+yay -S git stow zsh tmux cmake fzf imagemagick pyenv neovim -y
 ```
 
 - Zoxide
