@@ -82,23 +82,9 @@ alias vim="nvim"
 alias listdisks="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
 alias img="wezterm imgcat"
 alias gg="git log --oneline --abbrev-commit --all --graph --decorate --color"
+alias ls="lsd --group-directories-first --long --almost-all --git --blocks=permission,name"
+alias lst="lsd --group-directories-first --long --almost-all --git --blocks=permission,name --tree --depth"
 
-# Linux only alias
-if [[ $(uname) == "Linux" ]]; then 
-  alias emulator="/mnt/c/Users/Cadra/AppData/Local/Android/Sdk/emulator/emulator -avd Pixel_9_Pro_API_35"
-  alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all"
-  alias lst="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --all --tree -L"
-fi
-
-# MacOs only alias
-if [[ $(uname) == "Darwin" ]]; then 
-  alias ls="lsd --group-directories-first --long --almost-all --git --blocks=permission,name"
-  # alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all" 
-  # alias lst="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all --tree -L" 
-fi
-
-# Starship - end of zshrc
-eval "$(starship init zsh)"
 
 # Shell integrations
 source <(fzf --zsh)
@@ -126,7 +112,11 @@ fi
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+# Starship - end of zshrc
+eval "$(starship init zsh)"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
