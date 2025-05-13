@@ -7,17 +7,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # MacOS Paths
 if [[ $(uname) == "Darwin" ]]; then 
-  export ANDROID_HOME=$HOME/Library/Android/sdk
-  export PATH=$PATH:$ANDROID_HOME/emulator
-  export PATH=$PATH:$ANDROID_HOME/platform-tools
   export BW_SESSION="ViJXlHjiRD6HyuhUf+FqL9sdedolJsHAQ4jL43L/GbjZc+p0BQaFiXSe5zCKLiUY84WSC+Fh1QUIU1d9/9SIJQ=="
-fi
-
-# Linux Paths
-if [[ $(uname) == "Linux" ]]; then 
-  export ANDROID_HOME=$HOME/android_sdk
-  export PATH=$PATH:$HOME/android_sdk/cmdline-tools/tools/bin
-  export PATH=$PATH:/mnt/c/Users/Cadra/AppData/Local/Android/Sdk/platform-tools
 fi
 
 # Homebrew
@@ -79,6 +69,8 @@ zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
 # Aliases
 alias vim="nvim"
+alias grep="rg"
+alias find="fd"
 alias listdisks="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
 alias img="wezterm imgcat"
 alias gg="git log --oneline --abbrev-commit --all --graph --decorate --color"
@@ -97,20 +89,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-#pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-#pyenv end
-
-# Set Pywal color
-if [[ $(uname) == "Linux" ]]; then 
-  (cat ~/.cache/wal/sequences &)
-fi
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 # Starship - end of zshrc
 eval "$(starship init zsh)"
