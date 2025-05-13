@@ -92,8 +92,9 @@ fi
 
 # MacOs only alias
 if [[ $(uname) == "Darwin" ]]; then 
-  alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all" 
-  alias lst="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all --tree -L" 
+  alias ls="lsd --group-directories-first --long --almost-all --git --blocks=permission,name"
+  # alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all" 
+  # alias lst="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --all --tree -L" 
 fi
 
 # Starship - end of zshrc
