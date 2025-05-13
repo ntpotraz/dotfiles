@@ -90,11 +90,19 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# Starship - end of zshrc
-eval "$(starship init zsh)"
+# pyenv
+eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+#pyenv end
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Starship - end of zshrc
+eval "$(starship init zsh)"
 

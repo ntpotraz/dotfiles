@@ -9,16 +9,30 @@ Nerdfonts: https://github.com/ryanoasis/nerd-fonts/releases
 - Iosevka
 - Iosevka Term
 
-### macOS
-
-- brew
+### Webi Installer
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+curl -sS https://webi.sh/webi | sh; \
+source ~/.config/envman/PATH.env
 ```
 
 - git
 - gh
+- delta
+- lsd
+- bat
+- fd (git-aware find)
+- rg (git-aware grep)
+- golang
+- pyenv
+- ffmpeg
+
+```bash
+webi git gh delta lsd bat fd rg golang pyenv ffmpeg
+```
+
+### macOS
+
 - lazygit
 - stow
 - zoxide
@@ -30,11 +44,13 @@ Nerdfonts: https://github.com/ryanoasis/nerd-fonts/releases
 - sqlite3
 - xz
 - zlib
+- tcl-tk@8 
+- libb2
 - pyenv
 - ImageMagick
 
 ```bash
-brew install git gh lazygit stow zoxide wget tmux starship openssl readline sqlite3 xz zlib pyenv imagemagick
+brew install lazygit stow zoxide wget tmux starship openssl readline sqlite3 xz zlib imagemagick
 ```
 
 If lazygit config doesn't work, run
@@ -43,54 +59,39 @@ If lazygit config doesn't work, run
 export XDG_CONFIG_HOME="$HOME/.config"
 ```
 
-- Install Python
-  - Install Python build dependencies
-```bash
-brew install openssl readline sqlite3 xz zlib tcl-tk@8 libb2
-```
-  - Install Python
-```bash
-pyenv install 3.13.2
-pyenv global 3.13.2
-```
-
 ### Linux
 
 ```bash
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-- git
 - stow
 - zsh
 - tmux
 - cmake
 - fzf
 - gh
+- unzip
 - ImageMagick
+Debian
 - build-essential
 Arch
 - pyenv
 - neovim
+- base-devel
 
 ```bash
-sudo apt install git stow zsh tmux cmake fzf gh imagemagick build-essential -y
+sudo apt install build-essential stow zsh tmux cmake unzip fzf gh imagemagick -y
 ```
 
 ```bash
-yay -S git stow zsh tmux cmake fzf imagemagick pyenv neovim -y
+yay -S base-devel stow zsh tmux cmake unzip fzf imagemagick neovim -y
 ```
 
 - Zoxide
 
 ```bash
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
-```
-
-- GitHub CLI
-
-```bash
-curl -sS https://webi.sh/gh | sh
 ```
 
 - lazygit
@@ -103,22 +104,14 @@ sudo install lazygit /usr/local/bin
 rm lazygit && rm lazygit.tar.gz
 ```
 
-- Pyenv
+### Install Python
 
 ```bash
-curl -fsSL https://pyenv.run | bash
+pyenv install --list | grep "^  3\."
+pyenv install 3.xx.x
+pyenv global 3.xx.x
 ```
-  - Python build dependancies
-```bash
-sudo apt update; sudo apt install build-essential libssl-dev zlib1g-dev \
-libbz2-dev libreadline-dev libsqlite3-dev curl git \
-libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-```
-  - Install Python
-```bash
-pyenv install 3.13.2
-pyenv global 3.13.2
-```
+
 
 ### Setup SSH Key
 
@@ -180,14 +173,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ```bash
-cargo install eza
-```
-
-```bash  
-cargo install git-delta
-```
-
-```bash
 cargo install starship --locked
 ```
 
@@ -243,11 +228,6 @@ sudo apt install neovim
 
 #### Dependencies
 
-- ripgrep
-- unzip
-  - `sudo apt install ripgrep unzip`
-  - `yay -S ripgrep unzip`
-  
 - npm neovim
 - npm live-server
   - `npm install -g neovim live-server`
