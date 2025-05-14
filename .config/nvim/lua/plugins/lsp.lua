@@ -42,43 +42,43 @@ return {
           'stylua',
           'biome',
           'prettierd',
-          'ruff',
         },
       },
     },
   },
   config = function()
-    local capabilities = require('blink.cmp').get_lsp_capabilities()
     vim.diagnostic.config({
       virtual_text = true,
     })
 
-    local lsp = require('lspconfig')
-
-    lsp.lua_ls.setup({
-      capabilities = capabilities,
-      filetypes = 'lua',
-    })
-    lsp.html.setup({
-      capabilities = capabilities,
-      filetypes = 'html',
-    })
-    lsp.cssls.setup({
-      capabilities = capabilities,
-      filetypes = 'css',
-    })
-    lsp.ts_ls.setup({
-      capabilities = capabilities,
-      filetypes = {
-        'javascript',
-        'typescript',
-        'javascriptreact',
-        'typescriptreact',
-      },
-    })
-    lsp.pyright.setup({
-      capabilities = capabilities,
-      filetypes = 'python',
-    })
+    -- Commented Out Because I think they're automatically getting called
+    -- local lsp = require('lspconfig')
+    -- local capabilities = require('blink.cmp').get_lsp_capabilities()
+    --
+    -- lsp.lua_ls.setup({
+    --   capabilities = capabilities,
+    --   filetypes = 'lua',
+    -- })
+    -- lsp.html.setup({
+    --   capabilities = capabilities,
+    --   filetypes = 'html',
+    -- })
+    -- lsp.cssls.setup({
+    --   capabilities = capabilities,
+    --   filetypes = 'css',
+    -- })
+    -- lsp.ts_ls.setup({
+    --   capabilities = capabilities,
+    --   filetypes = {
+    --     'javascript',
+    --     'typescript',
+    --     'javascriptreact',
+    --     'typescriptreact',
+    --   },
+    -- })
+    -- lsp.pyright.setup({
+    --   capabilities = capabilities,
+    --   filetypes = 'python',
+    -- })
   end,
 }

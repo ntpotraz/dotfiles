@@ -3,6 +3,7 @@ local keymap = vim.keymap.set
 -- General
 keymap('i', 'jk', '<ESC>')
 keymap('n', '<leader>l', '<CMD>Lazy check<CR>')
+keymap('n', '<leader>rn', function() vim.lsp.buf.rename() end, { silent = true, desc = '[R]e[n]ame'})
 
 -- Movement
 keymap('n', 'n', 'nzz', { noremap = true })
