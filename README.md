@@ -26,16 +26,16 @@ source ~/.config/envman/PATH.env
 - golang
 - pyenv
 - ffmpeg
+- Zoxide
 
 ```bash
-webi git gh delta lsd bat fd rg golang pyenv ffmpeg
+webi git gh delta lsd bat fd rg golang pyenv ffmpeg zoxide
 ```
 
 ### macOS
 
 - lazygit
 - stow
-- zoxide
 - wget
 - tmux
 - starship
@@ -50,7 +50,7 @@ webi git gh delta lsd bat fd rg golang pyenv ffmpeg
 - ImageMagick
 
 ```bash
-brew install lazygit stow zoxide wget tmux starship openssl readline sqlite3 xz zlib imagemagick
+brew install lazygit stow wget tmux starship openssl readline sqlite3 xz zlib imagemagick
 ```
 
 If lazygit config doesn't work, run
@@ -86,12 +86,6 @@ sudo apt install build-essential stow zsh tmux cmake unzip fzf gh imagemagick -y
 
 ```bash
 yay -S base-devel stow zsh tmux cmake unzip fzf imagemagick neovim -y
-```
-
-- Zoxide
-
-```bash
-curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 ```
 
 - lazygit
