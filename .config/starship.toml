@@ -147,7 +147,8 @@ symbol = " "
 
 [python]
 symbol = " "
-disabled = true
+format = 'via $symbol(${version} )(\($virtualenv\) )'
+pyenv_version_name = true
 
 [rlang]
 symbol = "󰟔 "
