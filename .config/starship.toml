@@ -147,7 +147,7 @@ symbol = " "
 
 [python]
 symbol = " "
-format = 'via $symbol(${version} )(\($virtualenv\) )'
+format = 'via [${symbol}( \($virtualenv\) )]($style)'
 pyenv_version_name = true
 
 [rlang]
