@@ -16,7 +16,7 @@ curl -sS https://webi.sh/webi | sh; \
 source ~/.config/envman/PATH.env
 ```
 
-- git
+- git (Use package manager on Linux)
 - gh
 - delta
 - lsd
@@ -29,7 +29,7 @@ source ~/.config/envman/PATH.env
 - Zoxide
 
 ```bash
-webi git gh delta lsd bat fd rg golang pyenv ffmpeg zoxide
+webi gh delta lsd bat fd rg golang pyenv ffmpeg zoxide git
 ```
 
 ### macOS
