@@ -73,19 +73,20 @@ sudo apt-get update && sudo apt-get upgrade
 - gh
 - unzip
 - ImageMagick
+- git
 Debian
 - build-essential
 Arch
-- pyenv
+- tk
 - neovim
 - base-devel
 
 ```bash
-sudo apt install build-essential stow zsh tmux cmake unzip fzf gh imagemagick -y
+sudo apt install build-essential git stow zsh tmux cmake unzip fzf gh imagemagick -y
 ```
 
 ```bash
-yay -S base-devel stow zsh tmux cmake unzip fzf imagemagick neovim -y
+yay -S base-devel tk git stow zsh tmux cmake unzip fzf imagemagick neovim -y
 ```
 
 - lazygit
