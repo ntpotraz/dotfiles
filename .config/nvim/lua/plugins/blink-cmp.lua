@@ -21,7 +21,12 @@ return {
       ghost_text = { enabled = true },
     },
     fuzzy = { implementation = 'prefer_rust_with_warning' },
-    signature = { enabled = true },
+    signature = {
+      enabled = false,
+      window = {
+        show_documentation = false,
+      },
+    },
   },
   opts_extend = { 'sources.default' },
 }

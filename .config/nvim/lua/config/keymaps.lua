@@ -26,6 +26,9 @@ keymap('t', '<C-d>', '<C-\\><C-n><CMD>bd!<CR>', { desc = 'Exit terminal mode and
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 keymap('n', '<Esc>', '<CMD>nohlsearch<CR>')
 
+-- Diagnostics
+keymap('n', '<leader>f', function() vim.diagnostic.open_float() end, { silent = true, desc = '[F]loating Diagnostics'})
+
 -- Plugin Keybinds ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 --
 -- NVIM Tmux Navigator
