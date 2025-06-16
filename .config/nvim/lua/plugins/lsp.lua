@@ -37,6 +37,7 @@ return {
           'ts_ls',
           'emmet_language_server',
           'pyright',
+          'rust-analyzer',
 
           -- Formatters & Linters
           'stylua',
