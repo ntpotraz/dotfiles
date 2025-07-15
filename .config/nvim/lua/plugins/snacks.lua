@@ -120,7 +120,13 @@ ntpotraz@github 
     bigfile = { enabled = true },
     quickfile = { enabled = true },
     explorer = { enabled = true },
-    image = { enabled = true },
+    image = {
+      enabled = true,
+      doc = {
+        max_width = 10,
+        max_height = 5,
+      }
+    },
     git = { enabled = true },
     gitbrowse = { enabled = true },
     lazygit = { enabled = true },

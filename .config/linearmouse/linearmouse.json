@@ -1,14 +1,25 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
       "if" : {
         "device" : {
           "serialNumber" : "CF27CB04",
-          "category" : "mouse",
-          "productName" : "Logi POP Mouse",
           "vendorID" : "0x46d",
+          "productName" : "Logi POP Mouse",
+          "category" : "mouse",
           "productID" : "0xb030"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : 1,
+        "speed" : {
+          "vertical" : 0
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "distance" : {
+          "vertical" : "auto"
         }
       },
       "pointer" : {
@@ -17,27 +28,34 @@
       "buttons" : {
         "mappings" : [
           {
-            "option" : false,
-            "button" : 5,
-            "control" : false,
-            "action" : "missionControl",
             "command" : false,
-            "shift" : false
+            "action" : "missionControl",
+            "option" : false,
+            "control" : false,
+            "shift" : false,
+            "button" : 5
           }
         ]
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "trackpad",
+          "productID" : "0x0",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x0"
+        }
       },
       "scrolling" : {
-        "distance" : {
-          "vertical" : "auto"
-        },
-        "acceleration" : 1,
-        "speed" : {
-          "vertical" : 0
-        },
-        "reverse" : {
-          "vertical" : true
+        "acceleration" : {
+          "vertical" : 1
         }
+      },
+      "pointer" : {
+        "disableAcceleration" : false
       }
     }
-  ]
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
 }
