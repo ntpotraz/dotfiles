@@ -38,6 +38,7 @@ return {
           'emmet_language_server',
           'pyright',
           'rust-analyzer',
+          'gopls',
 
           -- Formatters & Linters
           'stylua',
