@@ -102,9 +102,9 @@ rm lazygit && rm lazygit.tar.gz
 ### Install Python
 
 ```bash
-pyenv install --list | grep "^  3\."
-pyenv install 3.xx.x
-pyenv global 3.xx.x
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv python list
+uv python install 3.xx.x
 ```
 
 
