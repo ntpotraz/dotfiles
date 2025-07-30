@@ -8,5 +8,6 @@
 .config/raycast/
 .config/btop
 .config/configstore
+.config/uv
 .zsh
 
