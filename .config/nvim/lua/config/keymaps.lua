@@ -15,6 +15,11 @@ keymap('n', '<C-d>', '<C-d>zz', { noremap = true })
 keymap('n', 'ss', '<CMD>split<CR>', { silent = true })
 keymap('n', 'sv', '<CMD>vs<CR>', { silent = true })
 
+-- System Copy/Paste
+keymap({'n', 'v', 'x'}, '<leader>y', '"+y<Esc>"', { silent  = true })
+keymap({'n', 'v', 'x'}, '<leader>yy', '"+yy<Esc>"', { silent  = true })
+keymap({'n', 'v', 'x'}, '<leader>p', '"+p', { silent  = true })
+
 -- Buffer
 keymap('n', '<Tab>', '<CMD>bnext<CR>', { silent = true })
 keymap('n', '<S-Tab>', '<CMD>bprev<CR>', { silent = true })

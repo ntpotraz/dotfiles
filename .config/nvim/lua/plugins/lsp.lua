@@ -10,8 +10,8 @@ return {
           -- See the configuration section for more details
           -- Load luvit types when the `vim.uv` word is found
           { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
-          { path = "snacks.nvim", words = { "Snacks" } },
-          { path = "lazy.nvim", words = { "LazyVim" } },
+          { path = 'snacks.nvim', words = { 'Snacks' } },
+          { path = 'lazy.nvim', words = { 'LazyVim' } },
         },
       },
     },
@@ -36,7 +36,7 @@ return {
           'cssls',
           'ts_ls',
           'emmet_language_server',
-          'pyright',
+          'basedpyright',
           'rust-analyzer',
           'gopls',
 
@@ -53,34 +53,5 @@ return {
       virtual_text = true,
     })
 
-    -- Commented Out Because I think they're automatically getting called
-    -- local lsp = require('lspconfig')
-    -- local capabilities = require('blink.cmp').get_lsp_capabilities()
-    --
-    -- lsp.lua_ls.setup({
-    --   capabilities = capabilities,
-    --   filetypes = 'lua',
-    -- })
-    -- lsp.html.setup({
-    --   capabilities = capabilities,
-    --   filetypes = 'html',
-    -- })
-    -- lsp.cssls.setup({
-    --   capabilities = capabilities,
-    --   filetypes = 'css',
-    -- })
-    -- lsp.ts_ls.setup({
-    --   capabilities = capabilities,
-    --   filetypes = {
-    --     'javascript',
-    --     'typescript',
-    --     'javascriptreact',
-    --     'typescriptreact',
-    --   },
-    -- })
-    -- lsp.pyright.setup({
-    --   capabilities = capabilities,
-    --   filetypes = 'python',
-    -- })
   end,
 }
