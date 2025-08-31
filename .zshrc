@@ -8,6 +8,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # MacOS Paths
 if [[ $(uname) == "Darwin" ]]; then 
   export BW_SESSION="ViJXlHjiRD6HyuhUf+FqL9sdedolJsHAQ4jL43L/GbjZc+p0BQaFiXSe5zCKLiUY84WSC+Fh1QUIU1d9/9SIJQ=="
+  export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 fi
 
 # Homebrew

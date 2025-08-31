@@ -16,9 +16,9 @@ keymap('n', 'ss', '<CMD>split<CR>', { silent = true })
 keymap('n', 'sv', '<CMD>vs<CR>', { silent = true })
 
 -- System Copy/Paste
-keymap({'n', 'v', 'x'}, '<leader>y', '"+y<Esc>"', { silent  = true })
-keymap({'n', 'v', 'x'}, '<leader>yy', '"+yy<Esc>"', { silent  = true })
-keymap({'n', 'v', 'x'}, '<leader>p', '"+p', { silent  = true })
+keymap({'v', 'x'}, '<leader>y', '"+y"', { noremap = true, silent  = true })
+keymap('n', '<leader>yy', '"+yy"', { noremap = true, silent  = true })
+keymap({'n', 'v', 'x'}, '<leader>p', '"+p', { noremap = true, silent  = true })
 
 -- Buffer
 keymap('n', '<Tab>', '<CMD>bnext<CR>', { silent = true })
@@ -33,6 +33,7 @@ keymap('n', '<Esc>', '<CMD>nohlsearch<CR>')
 
 -- Diagnostics
 keymap('n', '<leader>f', function() vim.diagnostic.open_float() end, { silent = true, desc = '[F]loating Diagnostics'})
+keymap({'n', 'i'}, '<C-h>', function() vim.lsp.buf.hover() end, {noremap = true, silent = true, desc = 'Signature Help'})
 
 -- Plugin Keybinds ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 --
