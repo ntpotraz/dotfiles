@@ -9,6 +9,12 @@ export PATH="$HOME/.local/bin:$PATH"
 if [[ $(uname) == "Darwin" ]]; then 
   export BW_SESSION="ViJXlHjiRD6HyuhUf+FqL9sdedolJsHAQ4jL43L/GbjZc+p0BQaFiXSe5zCKLiUY84WSC+Fh1QUIU1d9/9SIJQ=="
   export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+  # The following lines have been added by Docker Desktop to enable Docker CLI completions.
+  fpath=(/Users/cadra/.docker/completions $fpath)
+  autoload -Uz compinit
+  compinit
+# End of Docker CLI completions
 fi
 
 # Homebrew
@@ -40,7 +46,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # Load completions
-autoload -U compinit && compinit
+# autoload -U compinit && compinit
 
 zinit cdreplay -q
 
@@ -73,7 +79,6 @@ alias vim="nvim"
 alias grep="rg"
 alias find="fd"
 alias listdisks="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
-alias img="wezterm imgcat"
 alias gg="git log --oneline --abbrev-commit --all --graph --decorate --color"
 alias ls="lsd --group-directories-first --long --almost-all --git --blocks=permission,name"
 alias lst="lsd --group-directories-first --long --almost-all --git --blocks=permission,name --tree --depth"

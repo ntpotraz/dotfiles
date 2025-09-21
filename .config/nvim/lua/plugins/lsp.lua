@@ -53,5 +53,14 @@ return {
       virtual_text = true,
     })
 
+    vim.lsp.config('basedpyright', {
+      settings = {
+        basedpyright = {
+          analysis = {
+            typeCheckingMode = "basic",
+          }
+        }
+      }
+    })
   end,
 }
