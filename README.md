@@ -24,12 +24,11 @@ source ~/.config/envman/PATH.env
 - fd (git-aware find)
 - rg (git-aware grep)
 - golang
-- pyenv
 - ffmpeg
 - Zoxide
 
 ```bash
-webi gh delta lsd bat fd rg golang pyenv ffmpeg zoxide git
+webi gh delta lsd bat fd rg golang ffmpeg zoxide git
 ```
 
 ### macOS
@@ -46,7 +45,6 @@ webi gh delta lsd bat fd rg golang pyenv ffmpeg zoxide git
 - zlib
 - tcl-tk@8 
 - libb2
-- pyenv
 - ImageMagick
 
 ```bash
@@ -62,7 +60,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 ### Linux
 
 ```bash
-sudo apt-get update && sudo apt-get upgrade
+sudo apt-get update -y && sudo apt-get upgrade -y
 ```
 
 - stow
