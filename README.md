@@ -59,8 +59,18 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 ### Linux
 
+Ubuntu
+
 ```bash
 sudo apt-get update -y && sudo apt-get upgrade -y
+```
+
+Arch
+Must create a user first
+
+```bash
+pacman -Syu
+pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 ```
 
 - stow
@@ -75,6 +85,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 Debian
 - build-essential
 Arch
+- sudo
 - tk
 - neovim
 - base-devel
@@ -84,7 +95,7 @@ sudo apt install build-essential git stow zsh tmux cmake unzip fzf gh imagemagic
 ```
 
 ```bash
-yay -S base-devel tk git stow zsh tmux cmake unzip fzf imagemagick neovim -y
+yay -S base-devel sudo tk git stow zsh tmux cmake unzip fzf imagemagick neovim -y
 ```
 
 - lazygit
