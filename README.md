@@ -95,7 +95,7 @@ sudo apt install build-essential git stow zsh tmux cmake unzip fzf gh imagemagic
 ```
 
 ```bash
-yay -S base-devel sudo tk git stow zsh tmux cmake unzip fzf imagemagick neovim -y
+yay -S base-devel sudo tk git stow zsh tmux openssh cmake unzip fzf imagemagick neovim -y
 ```
 
 - lazygit
