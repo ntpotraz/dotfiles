@@ -24,11 +24,11 @@ source ~/.config/envman/PATH.env
 - fd (git-aware find)
 - rg (git-aware grep)
 - golang
-- ffmpeg
 - Zoxide
+- ffmpeg
 
 ```bash
-webi gh delta lsd bat fd rg golang ffmpeg zoxide git
+webi gh delta lsd bat fd rg golang zoxide git ffmpeg
 ```
 
 ### macOS
