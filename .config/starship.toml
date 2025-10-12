@@ -2,7 +2,11 @@
 success_symbol = ''
 
 [aws]
+disabled = true
 symbol = "  "
+
+[gcloud]
+disabled = true
 
 [buf]
 symbol = " "
