@@ -9,5 +9,6 @@
 .config/btop
 .config/configstore
 .config/uv
+.config/gcloud
 .zsh
 
