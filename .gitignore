@@ -10,5 +10,6 @@
 .config/configstore
 .config/uv
 .config/gcloud
+.config/github-copilot
 .zsh
 

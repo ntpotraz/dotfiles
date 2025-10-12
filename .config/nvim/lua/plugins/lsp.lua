@@ -39,6 +39,7 @@ return {
           'basedpyright',
           'rust-analyzer',
           'gopls',
+          'copilot-language-server',
 
           -- Formatters & Linters
           'stylua',
