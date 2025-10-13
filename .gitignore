@@ -4,7 +4,7 @@
 .config/tmux/plugins/
 .config/gh/
 .config/lazygit/state.yml
-.config/raycast/
+.config/raycast
 .config/btop
 .config/configstore
 .config/uv
