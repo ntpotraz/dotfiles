@@ -116,6 +116,11 @@ uv python list
 uv python install 3.xx.x
 ```
 
+### Install Bun
+
+```bash
+curl -fsSL https://bun.sh/install | bash
+```
 
 ### Setup SSH Key
 
