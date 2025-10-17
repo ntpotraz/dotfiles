@@ -1,7 +1,6 @@
 .config/nvim/lazy-lock.json
 .config/nvim/lazyvim.json
 .config/envman
-.config/zed/
 .config/tmux/plugins/
 .config/gh/
 .config/lazygit/state.yml
