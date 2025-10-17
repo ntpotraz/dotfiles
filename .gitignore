@@ -10,5 +10,7 @@
 .config/uv
 .config/gcloud
 .config/github-copilot
+.config/zed/prompts
+.config/zed/embeddings
 .zsh
 
