@@ -7,12 +7,35 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "wsl_connections": [
+    {
+      "distro_name": "archbtw",
+      "user": null,
+      "projects": []
+    }
+  ],
+  "agent": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-pro"
+    },
+    "model_parameters": []
+  },
   "vim_mode": true,
+  "relative_line_numbers": true,
+  "vertical_scroll_margin": 8,
+  "scrollbar": { "show": "never" },
+  "scroll_beyond_last_line": "vertical_scroll_margin",
+  "base_keymap": "VSCode",
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 15,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
+    "light": "Gruvbox Light",
+    "dark": "Bluloco Dark"
+  },
+  "auto_install_extensions": {
+    "html": true,
+    "bluloco-theme": true
   }
 }
