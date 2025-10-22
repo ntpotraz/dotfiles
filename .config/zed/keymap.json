@@ -7,7 +7,7 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
+    "context": "workspace",
     "bindings": {
       "ctrl-n": null
     }
@@ -30,7 +30,12 @@
   {
     "context": "vim_mode == insert && !menu",
     "bindings": {
-      "j k": "vim::NormalBefore",
+      "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
       "tab": "vim::GoToTab",
       "shift-tab": "vim::GoToPreviousTab",
       "s v": "pane::SplitVertical",
