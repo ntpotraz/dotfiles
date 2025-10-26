@@ -7,28 +7,19 @@
 // from the command palette.
 [
   {
-    "context": "workspace",
     "bindings": {
-      "ctrl-n": null
-    }
-  },
-  {
-    "context": "workspace",
-    "bindings": {
-      "' f": "file_finder::Toggle",
-      "ctrl-.": "workspace::ToggleRightDock",
-      "space t": "workspace::ToggleBottomDock",
-      "ctrl-n": "workspace::ToggleLeftDock",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-n": "workspace::ToggleLeftDock",
+      "ctrl-.": "workspace::ToggleRightDock"
     }
   },
 
   // Vim Stuff
   {
-    "context": "vim_mode == insert && !menu",
+    "context": "vim_mode == insert",
     "bindings": {
       "j k": "vim::NormalBefore"
     }
@@ -41,10 +32,11 @@
       "s v": "pane::SplitVertical",
       "s s": "pane::SplitHorizontal",
       "n": ["workspace::SendKeystrokes", "n z z"],
-      "shift-n": ["workspace::SendKeystrokes", "shift-n z z"],
       "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
       "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
-      "space a": "workspace::ToggleRightDock",
+      "space a a": "workspace::ToggleRightDock",
+      "' f": "file_finder::Toggle",
+      "space t": "workspace::ToggleBottomDock",
       "space r n": "editor::Rename"
     }
   }
