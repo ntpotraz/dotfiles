@@ -44,6 +44,7 @@
   "auto_install_extensions": {
     "html": true,
     "bluloco-theme": true,
-    "biome": true
+    "biome": true,
+    "sql": true
   }
 }

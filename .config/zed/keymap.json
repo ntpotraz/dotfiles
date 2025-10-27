@@ -12,8 +12,14 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
-      "ctrl-n": "workspace::ToggleLeftDock",
+      "ctrl-n": "project_panel::ToggleFocus",
       "ctrl-.": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "ctrl-n": "workspace::ToggleLeftDock"
     }
   },
 
