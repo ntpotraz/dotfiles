@@ -17,6 +17,12 @@ if [[ $(uname) == "Darwin" ]]; then
 # End of Docker CLI completions
 fi
 
+# Linux Paths
+if [[ $(uname) == "Linux"]]; then
+  # Turso
+  export PATH="$PATH:/home/cadra/.turso"
+fi
+
 # Homebrew
 if [[ $(uname) == "Darwin" ]]; then 
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -113,3 +119,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+

@@ -46,6 +46,7 @@
     "html": true,
     "bluloco-theme": true,
     "biome": true,
-    "sql": true
+    "sql": true,
+    "emmet": true
   }
 }
