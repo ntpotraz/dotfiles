@@ -10,24 +10,22 @@ if [[ $(uname) == "Darwin" ]]; then
   export BW_SESSION="ViJXlHjiRD6HyuhUf+FqL9sdedolJsHAQ4jL43L/GbjZc+p0BQaFiXSe5zCKLiUY84WSC+Fh1QUIU1d9/9SIJQ=="
   export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
-  # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-  fpath=(/Users/cadra/.docker/completions $fpath)
-  autoload -Uz compinit
-  compinit
-# End of Docker CLI completions
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  export HOMEBREW_CASK_OPTS=--no-quarantine
 fi
 
 # Linux Paths
-if [[ $(uname) == "Linux"]]; then
+if [[ $(uname) == "Linux" ]]; then 
   # Turso
   export PATH="$PATH:/home/cadra/.turso"
 fi
 
+  # The following lines have been added by Docker Desktop to enable Docker CLI completions.
+  fpath=(~/.docker/completions $fpath)
+  autoload -Uz compinit
+  compinit
+  # End of Docker CLI completions
 # Homebrew
-if [[ $(uname) == "Darwin" ]]; then 
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-  export HOMEBREW_CASK_OPTS=--no-quarantine
-fi
 
 # Linux Paths
 if [[ $(uname) == "Linux" ]]; then 
