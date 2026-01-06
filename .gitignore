@@ -12,5 +12,6 @@
 .config/github-copilot
 .config/zed/prompts
 .config/zed/embeddings
+.config/qBittorrent
 .zsh
 
