@@ -38,7 +38,8 @@ return {
     { "<leader>Z",  function() Snacks.zen.zoom() end, desc = "Toggle Zoom" },
 
     -- Terminal
-    { '<leader>t', function() Snacks.terminal() end, desc = 'Open [T]erminal' },
+    { '<leader>tt', function() Snacks.terminal.toggle() end, desc = 'Open [T]erminal' },
+    { '<leader>ft', function() Snacks.terminal(nil, { win = {position = "float"}}) end, desc = 'Open [T]erminal' },
   },
   opts = {
     -- your configuration comes here
