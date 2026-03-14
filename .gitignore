@@ -8,6 +8,7 @@
 .config/btop
 .config/configstore
 .config/uv
+.config/cagent
 .config/gcloud
 .config/github-copilot
 .config/zed/prompts

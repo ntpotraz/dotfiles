@@ -12,6 +12,9 @@ if [[ $(uname) == "Darwin" ]]; then
 
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export HOMEBREW_CASK_OPTS=--no-quarantine
+
+  # Added by Antigravity
+  export PATH="/Users/cadra/.antigravity/antigravity/bin:$PATH"
 fi
 
 # Linux Paths
