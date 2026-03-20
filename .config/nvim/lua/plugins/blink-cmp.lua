@@ -29,7 +29,7 @@ return {
         winblend = 0,
         border = 'rounded',
       },
-      ghost_text = { enabled = true },
+      -- ghost_text = { enabled = true },
     },
     fuzzy = { implementation = 'prefer_rust_with_warning' },
     signature = {

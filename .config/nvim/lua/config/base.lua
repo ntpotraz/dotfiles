@@ -6,7 +6,7 @@ vim.opt.termguicolors = true
 vim.g.have_nerd_font = true
 
 -- Number of suggestions in completion
-vim.opt.pumheight = 6
+vim.opt.pumheight = 8
 
 -- Make line numbers default
 vim.opt.number = true
