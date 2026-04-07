@@ -1,21 +1,30 @@
 return {
+  -- {
+  --   'uloco/bluloco.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   dependencies = { 'rktjmp/lush.nvim' },
+  --   name = 'bluloco',
+  --   config = function()
+  --     require('bluloco').setup({
+  --       style = 'dark',
+  --       commentStyle = { italics = true },
+  --       transparent = false,
+  --       italics = true,
+  --       terminal = vim.fn.has('gui_running') == 1,
+  --       guicursor = true,
+  --       rainbow_headings = true,
+  --     })
+  --     vim.cmd('colorscheme bluloco')
+  --   end,
+  -- },
+  --
   {
-    'uloco/bluloco.nvim',
+    'scottmckendry/cyberdream.nvim',
     lazy = false,
     priority = 1000,
-    dependencies = { 'rktjmp/lush.nvim' },
-    name = 'bluloco',
     config = function()
-      require('bluloco').setup({
-        style = 'dark',
-        commentStyle = { italics = true },
-        transparent = false,
-        italics = true,
-        terminal = vim.fn.has('gui_running') == 1,
-        guicursor = true,
-        rainbow_headings = true,
-      })
-      vim.cmd('colorscheme bluloco')
+      vim.cmd('colorscheme cyberdream')
     end,
   },
   {

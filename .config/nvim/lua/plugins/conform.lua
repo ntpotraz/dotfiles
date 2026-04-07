@@ -24,9 +24,12 @@ return {
     },
     formatters = {
       biome = {
-        append_args = {
+        args = {
+          'format',
           '--indent-style=space',
           '--semicolons=always',
+          '--stdin-file-path',
+          '$FILENAME',
         },
       },
     },

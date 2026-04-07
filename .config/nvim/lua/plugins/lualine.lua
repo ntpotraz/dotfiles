@@ -6,7 +6,7 @@ return {
   },
   event = 'VeryLazy',
   opts = {
-    theme = 'kanagawa',
+    theme = 'auto',
     sections = {
       lualine_x = {
         { 'macro_recording', separator = '' },
