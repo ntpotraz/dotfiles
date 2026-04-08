@@ -53,6 +53,9 @@ return {
   config = function()
     vim.diagnostic.config({
       virtual_text = true,
+      float = {
+        border = 'rounded',
+      }
     })
 
     vim.lsp.config('basedpyright', {
