@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Zed (Default)",
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -38,9 +39,9 @@
   "ui_font_size": 16,
   "buffer_font_size": 14.0,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Bluloco Dark Italic",
-    "dark": "Bluloco Dark Italic"
+    "dark": "Gruvbox Dark"
   },
   "auto_install_extensions": {
     "html": true,
