@@ -223,4 +223,4 @@ gaps.outer.right =      0
 
 [[on-window-detected]]
   if.app-id = 'app.legcord.Legcord'
-  run = ['move-node-to-workspace Q']
+  run = ['move-node-to-workspace G']
