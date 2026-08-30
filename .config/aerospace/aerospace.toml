@@ -230,4 +230,11 @@ gaps.outer.right =      0
 
 [[on-window-detected]]
   if.app-id = 'app.legcord.Legcord'
-  run = ['move-node-to-workspace Q']
+  run = ['move-node-to-workspace G']
+
+[[on-window-detected]]
+  if.app-id = 'com.heroicgameslauncher.hgl'
+  run = ['move-node-to-workspace F']
+[[on-window-detected]]
+  if.app-id = 'ModrinthApp'
+  run = ['move-node-to-workspace F']
