@@ -99,6 +99,7 @@ alias listdisks="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
 alias gg="git log --oneline --abbrev-commit --all --graph --decorate --color"
 alias ls="lsd --group-directories-first --long --almost-all --git --blocks=permission,name"
 alias lst="lsd --group-directories-first --long --almost-all --git --blocks=permission,name --tree --depth"
+alias oc="opencode"
 
 
 # Shell integrations
