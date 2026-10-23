@@ -1,0 +1,68 @@
+return {
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    main = 'nvim-treesitter',
+    opts = {
+      highlight = { enable = true },
+      indent = { enable = true },
+      auto_install = true,
+      ensure_installed = {
+        'vim',
+        'lua',
+        'vimdoc',
+        'luadoc',
+        'html',
+        'css',
+        'javascript',
+        'typescript',
+        'tsx',
+        'jsx',
+        'markdown',
+        'markdown_inline',
+        'go',
+        'c_sharp',
+      },
+    },
+  },
+  {
+    'windwp/nvim-ts-autotag',
+    ft = {
+      'html',
+      'javascript',
+      'typescript',
+      'javascriptreact',
+      'typescriptreact',
+      'svelte',
+      'vue',
+      'tsx',
+      'jsx',
+      'rescript',
+      'xml',
+      'php',
+      'markdown',
+      'astro',
+      'glimmer',
+      'handlebars',
+      'hbs',
+    },
+    config = function()
+      require('nvim-ts-autotag').setup({
+        opts = {
+          -- Defaults
+          enable_close = true, -- Auto close tags
+          enable_rename = true, -- Auto rename pairs of tags
+          enable_close_on_slash = false, -- Auto close on trailing </
+        },
+        -- Also override individual filetype configs, these take priority.
+        -- Empty by default, useful if one of the "opts" global settings
+        -- doesn't work well in a specific filetype
+        per_filetype = {
+          ['html'] = {
+            enable_close = false,
+          },
+        },
+      })
+    end,
+  },
+}
