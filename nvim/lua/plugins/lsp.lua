@@ -39,7 +39,6 @@ return {
           'basedpyright',
           'rust-analyzer',
           'gopls',
-          'copilot-language-server',
 
           -- Formatters & Linters
           'stylua',
@@ -51,6 +50,20 @@ return {
     },
   },
   config = function()
+    -- Let Roslyn load projects that have COM references (see the targets file).
+    vim.env.CustomAfterMicrosoftCommonTargets = vim.fn.stdpath('config') .. '\\roslyn\\skip-com-references.targets'
+
+    -- Stops Roslyn from loading a buffer as a standalone file-based program
+    -- before the solution finishes loading, which hides the rest of the project.
+    vim.lsp.config('roslyn_ls', {
+      settings = {
+        projects = {
+          dotnet_enable_file_based_programs = false,
+          dotnet_enable_file_based_programs_when_ambiguous = false,
+        },
+      },
+    })
+
     vim.diagnostic.config({
       virtual_text = true,
       float = {

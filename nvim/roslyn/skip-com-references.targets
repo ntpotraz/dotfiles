@@ -1,0 +1,22 @@
+<Project>
+  <!--
+    Roslyn's design-time build uses .NET MSBuild, which cannot run
+    ResolveComReference (MSB4803) or build C++ (.vcxproj) project references.
+    Dropping both lets the C# projects load with their sources; code that uses
+    the COM interop types shows errors in the editor.
+    Imported through CustomAfterMicrosoftCommonTargets, set only for nvim.
+  -->
+  <Target Name="NvimSkipUnsupportedReferences"
+          BeforeTargets="AssignProjectConfiguration;_SplitProjectReferencesByFileExistence;ResolveProjectReferences;ResolveComReferences;ResolveAssemblyReferences">
+    <ItemGroup>
+      <COMReference Remove="@(COMReference)" />
+      <ProjectReference Remove="@(ProjectReference)" Condition="'%(Extension)' == '.vcxproj'" />
+    </ItemGroup>
+  </Target>
+  <!-- The SDK re-adds transitive project references (including the .vcxproj) from the assets file. -->
+  <Target Name="NvimSkipTransitiveNativeReferences" AfterTargets="IncludeTransitiveProjectReferences">
+    <ItemGroup>
+      <ProjectReference Remove="@(ProjectReference)" Condition="'%(Extension)' == '.vcxproj'" />
+    </ItemGroup>
+  </Target>
+</Project>

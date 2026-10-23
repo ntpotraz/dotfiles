@@ -3,11 +3,10 @@ return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     main = 'nvim-treesitter',
-    opts = {
-      highlight = { enable = true },
-      indent = { enable = true },
-      auto_install = true,
-      ensure_installed = {
+    -- The `main` branch has no module system: parsers are installed with
+    -- install() and highlighting/indent must be started per buffer.
+    config = function()
+      local parsers = {
         'vim',
         'lua',
         'vimdoc',
@@ -17,13 +16,25 @@ return {
         'javascript',
         'typescript',
         'tsx',
-        'jsx',
         'markdown',
         'markdown_inline',
         'go',
         'c_sharp',
-      },
-    },
+      }
+      require('nvim-treesitter').install(parsers)
+
+      vim.api.nvim_create_autocmd('FileType', {
+        desc = 'Start treesitter highlighting and indent',
+        group = vim.api.nvim_create_augroup('treesitter-start', { clear = true }),
+        callback = function(args)
+          -- Silently skip filetypes without an installed parser.
+          if not pcall(vim.treesitter.start, args.buf) then
+            return
+          end
+          vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end,
+      })
+    end,
   },
   {
     'windwp/nvim-ts-autotag',

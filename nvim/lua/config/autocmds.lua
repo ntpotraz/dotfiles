@@ -9,10 +9,9 @@ autocmd("TextYankPost", {
   end,
 })
 
--- Roslyn semantic tokens layer colors on top of treesitter captures using
--- the generic @lsp.type.* groups, which washes out the colorscheme (plain
--- tokens, generic identifier colors). Treesitter alone highlights C# well,
--- so keep Roslyn for LSP features only.
+-- Roslyn semantic tokens layer on top of treesitter captures using the generic
+-- @lsp.type.* groups, which washes out the colorscheme. Treesitter alone
+-- highlights C# well, so keep Roslyn for LSP features only.
 autocmd("LspAttach", {
   desc = "[R]oslyn: disable semantic tokens so treesitter provides highlighting",
   group = vim.api.nvim_create_augroup("roslyn-no-semantic-tokens", { clear = true }),
