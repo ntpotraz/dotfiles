@@ -36,30 +36,9 @@ keymap('n', '<leader>f', function() vim.diagnostic.open_float() end, { silent = 
 keymap({'n', 'i'}, '<C-h>', function() vim.lsp.buf.hover() end, {noremap = true, silent = true, desc = 'Signature Help'})
 
 -- Plugin Keybinds ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
---
--- NVIM Tmux Navigator
-if vim.fn.has('win32') == 1 then
-  -- psmux can't decide per keypress whether to intercept C-h/j/k/l, so on
-  -- Windows use Alt (psmux leaves it alone) and hand off to psmux at the edge.
-  local function navigate(dir, pane_flag)
-    return function()
-      local win = vim.api.nvim_get_current_win()
-      vim.cmd('wincmd ' .. dir)
-      if vim.api.nvim_get_current_win() == win and vim.env.TMUX then
-        local cmd = { 'tmux', 'select-pane', '-' .. pane_flag }
-        if vim.env.TMUX_PANE then vim.list_extend(cmd, { '-t', vim.env.TMUX_PANE }, 2) end
-        vim.fn.system(cmd)
-      end
-    end
-  end
-  keymap('n', '<M-h>', navigate('h', 'L'), {noremap = true, silent = true})
-  keymap('n', '<M-j>', navigate('j', 'D'), {noremap = true, silent = true})
-  keymap('n', '<M-k>', navigate('k', 'U'), {noremap = true, silent = true})
-  keymap('n', '<M-l>', navigate('l', 'R'), {noremap = true, silent = true})
-else
-  keymap('n', '<C-h>', '<CMD>NvimTmuxNavigateLeft<CR>', {noremap = true, silent = true})
-  keymap('n', '<C-j>', '<CMD>NvimTmuxNavigateDown<CR>', {noremap = true, silent = true})
-  keymap('n', '<C-k>', '<CMD>NvimTmuxNavigateUp<CR>', {noremap = true, silent = true})
-  keymap('n', '<C-l>', '<CMD>NvimTmuxNavigateRight<CR>', {noremap = true, silent = true})
-end
 
+-- NVIM Tmux Navigator
+keymap('n', '<C-h>', '<CMD>NvimTmuxNavigateLeft<CR>', {noremap = true, silent = true})
+keymap('n', '<C-j>', '<CMD>NvimTmuxNavigateDown<CR>', {noremap = true, silent = true})
+keymap('n', '<C-k>', '<CMD>NvimTmuxNavigateUp<CR>', {noremap = true, silent = true})
+keymap('n', '<C-l>', '<CMD>NvimTmuxNavigateRight<CR>', {noremap = true, silent = true})

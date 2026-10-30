@@ -39,6 +39,7 @@ return {
           'basedpyright',
           'rust-analyzer',
           'gopls',
+          'roslyn_ls',
 
           -- Formatters & Linters
           'stylua',
