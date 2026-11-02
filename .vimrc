@@ -1,5 +1,7 @@
 set nu
 set relativenumber
+set ignorecase
+set smartcase
 
 inoremap jk <ESC>
 nnoremap n nzz
