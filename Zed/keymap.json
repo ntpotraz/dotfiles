@@ -1,0 +1,105 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "",
+    "bindings": {
+      "ctrl-t": "terminal_panel::Toggle",
+      "ctrl-g": "git_panel::Toggle",
+      "ctrl-n": "project_panel::Toggle", // open (if needed) + focus the file tree
+    },
+  },
+  {
+    // Pane/dock navigation: editors, terminal, project panel (lives in a Dock), empty panes
+    "context": "Editor || Terminal || Dock || EmptyPane || SharedScreen",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // Put key bindings here if you want them to work in normal & visual mode.
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      //Fuzzy finding
+      "' f": "file_finder::Toggle",
+      "' r": "pane::DeploySearch", // project-wide grep
+
+      // Git
+      // Window management
+      "s s": "pane::SplitDown",
+      "s v": "pane::SplitRight",
+
+      // Naviation
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem",
+      "ctrl-d": [
+        "workspace::SendKeystrokes",
+        "ctrl-d z z"
+      ],
+      "ctrl-u": [
+        "workspace::SendKeystrokes",
+        "ctrl-u z z"
+      ],
+      "n": [
+        "workspace::SendKeystrokes",
+        "n z z"
+      ],
+      "shift-n": [
+        "workspace::SendKeystrokes",
+        "shift-n z z"
+      ],
+
+      // Misc
+      "space r n": "editor::Rename",
+      "shift-y": ["workspace::SendKeystrokes", "y $"], // Use neovim's yank behavior: yank to end of line.
+      "space f": "editor::Hover",
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore", // In insert mode, make jk escape to normal mode.
+      "ctrl-y": "editor::ConfirmCompletion",
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      // Put key bindings here (in addition to the context above) if you want them to
+      // work when no editor exists.
+      "' f": "file_finder::Toggle",
+      "' r": "pane::DeploySearch",
+    }
+  },
+  {
+    // Same key closes the right dock while the file tree is focused
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "' e": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Terminal && !vi_mode",
+    "bindings": {
+      "j k": "terminal::ToggleViMode", // jk drops into the terminal's vi (normal) mode
+   }
+  },
+  {
+    "context": "Terminal && vi_mode",
+    "bindings": {
+   }
+  },
+]
