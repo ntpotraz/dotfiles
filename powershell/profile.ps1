@@ -16,3 +16,8 @@ Set-Alias -Name oc -Value opencode
 # be redefined with Set-Alias directly; remove them first.
 Remove-Item alias:ls -Force -ErrorAction SilentlyContinue
 Set-Alias -Name ls -Value Get-LinuxLikeList
+
+function webi {
+    powershell -ExecutionPolicy Bypass -File "$env:USERPROFILE\.local\bin\webi-pwsh.ps1" @args
+}
+

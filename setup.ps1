@@ -24,3 +24,4 @@ if (Test-Path $oldNvim) {
 }
 
 Write-Host "Done. Open a new terminal to pick up the changes."
+

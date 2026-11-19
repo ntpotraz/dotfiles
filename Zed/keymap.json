@@ -7,10 +7,8 @@
 // from the command palette.
 [
   {
-    "context": "",
+    "context": "!menu || ProjectPanel",
     "bindings": {
-      "ctrl-t": "terminal_panel::Toggle",
-      "ctrl-g": "git_panel::Toggle",
       "ctrl-n": "project_panel::Toggle", // open (if needed) + focus the file tree
     },
   },
@@ -22,6 +20,8 @@
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-g": "git_panel::Toggle",
+      "ctrl-t": "terminal_panel::Toggle",
     }
   },
   {
@@ -38,6 +38,8 @@
       "' r": "pane::DeploySearch", // project-wide grep
 
       // Git
+      "g r": "editor::FindAllReferences",
+      
       // Window management
       "s s": "pane::SplitDown",
       "s v": "pane::SplitRight",
@@ -73,6 +75,7 @@
     "bindings": {
       "j k": "vim::NormalBefore", // In insert mode, make jk escape to normal mode.
       "ctrl-y": "editor::ConfirmCompletion",
+      "enter": "editor::Newline",
     }
   },
   {
