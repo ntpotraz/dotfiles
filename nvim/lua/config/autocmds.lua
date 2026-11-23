@@ -2,6 +2,21 @@
 
 local augroup = vim.api.nvim_create_augroup("UserConfig", { clear = true })
 
+vim.api.nvim_create_autocmd("InsertEnter", {
+  group = augroup,
+  desc = 'Change to Normal Numbers',
+  callback = function()
+    vim.opt.relativenumber = false
+  end,
+})
+vim.api.nvim_create_autocmd("InsertLeave", {
+  group = augroup,
+  desc = 'Change to Relative Numbers',
+  callback = function()
+    vim.opt.relativenumber = true
+  end,
+})
+
 -- Briefly highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = augroup,

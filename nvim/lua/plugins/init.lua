@@ -35,6 +35,7 @@ vim.pack.add({
   gh('folke/snacks.nvim'),
   gh('nvim-mini/mini.nvim'),
   gh('stevearc/oil.nvim'),
+  gh('alexghergh/nvim-tmux-navigation'),
 
   -- Treesitter (Neovim 0.12 main branch rewrite)
   { src = gh('nvim-treesitter/nvim-treesitter'), version = 'main' },

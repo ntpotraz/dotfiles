@@ -9,7 +9,11 @@ vim.g.maplocalleader = "\\"
 
 -- General
 keymap('i', 'jk', '<ESC>', { noremap = true })
-keymap('n', '<leader><S-r>', '<CMD>source %<CR><CMD>echo "File reloaded"<CR>', {noremap = true, desc = 'Source current file' })
+keymap('n', '<leader>R', function()
+  vim.cmd('update')
+  vim.cmd('source %')
+  vim.notify('Reloaded: ' .. vim.fn.expand('%:t'))
+end, { desc = 'Save and source current file' })
 keymap('n', '<leader>cf', function() vim.lsp.buf.format() end, { silent = true })
 
 -- Project Actions
@@ -29,6 +33,11 @@ keymap('n', 'sv', '<CMD>vs<CR>', { silent = true })
 keymap({'v', 'x'}, '<leader>y', '"+y"', { noremap = true, silent  = true })
 keymap('n', '<leader>yy', '"+yy"', { noremap = true, silent  = true })
 keymap({'n', 'v', 'x'}, '<leader>p', '"+p', { noremap = true, silent  = true })
+keymap('n', '<leader>cp', function()
+  local path = vim.fn.expand('%:p')
+  vim.fn.setreg('+', path)
+  vim.notify('Copied: ' .. path)
+end, { desc = 'Copy absolute file path' })
 
 -- Buffer
 keymap('n', '<Tab>', '<CMD>bnext<CR>', { silent = true })
@@ -79,11 +88,14 @@ keymap( 'n', "<leader>Z",  function() Snacks.zen.zoom() end, { desc = "Toggle Zo
 -- Terminal
 keymap( 'n', '<leader>tt', function() Snacks.terminal(nil, { win = {position = "float", border = true}}) end, { desc = 'Open [T]erminal' })
 
--- Mini --------------------------------------------------------------------------------------------
--- keymap( 'n', '-', function() MiniFiles.open() end)
-
 -- Oil ---------------------------------------------------------------------------------------------
 keymap( 'n', '-', '<CMD>Oil --float<CR>', { noremap = true })
+
+-- Tmux Navigation ---------------------------------------------------------------------------------
+keymap('n', '<C-h>', '<CMD>NvimTmuxNavigateLeft<CR>', { noremap = true })
+keymap('n', '<C-j>', '<CMD>NvimTmuxNavigateDown<CR>', { noremap = true })
+keymap('n', '<C-k>', '<CMD>NvimTmuxNavigateUp<CR>', { noremap = true })
+keymap('n', '<C-l>', '<CMD>NvimTmuxNavigateRight<CR>', { noremap = true })
 
 -- Reference snippets for installed tools (uncomment or adapt as you like):
 --
