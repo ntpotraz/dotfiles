@@ -21,3 +21,4 @@ function webi {
     powershell -ExecutionPolicy Bypass -File "$env:USERPROFILE\.local\bin\webi-pwsh.ps1" @args
 }
 
+Invoke-Expression (& { (zoxide init --cmd cd powershell | Out-String) })
