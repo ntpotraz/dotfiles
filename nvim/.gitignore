@@ -1,0 +1,10 @@
+# Runtime / local logs
+nvim.log
+*.log
+
+# Swap / backup / undo artifacts
+*.swp
+*.swo
+*~
+
+# Note: Keep nvim-pack-lock.json tracked in git for reproducible plugin revisions.
